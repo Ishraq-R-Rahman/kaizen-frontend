@@ -1,0 +1,15 @@
+.content-box {
+    padding: 0 30px;
+}
+
+.show {
+    border-bottom: 5px solid $secondary-color;
+}
+
+.hide {
+    border-bottom: 5px solid $primary-color;
+}
+
+.highlight {
+    color: $secondary-color;
+}

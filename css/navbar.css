@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content-box {
+  padding: 0 30px;
+}
+
+.show {
+  border-bottom: 5px solid #c3073f;
+}
+
+.hide {
+  border-bottom: 5px solid #1a1a1d;
+}
+
+.btn-small {
+  width: 40px;
+  height: 40px;
+  background: #c3073f;
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
+.btn-small > * {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+.btn-small:hover {
+  background: #4e4e50;
+}
+
+.nav-bar {
+  font-family: "Staatliches", cursive;
+  font-size: 1.2rem;
+  width: 100vw;
+  height: 60px;
+  background: #1a1a1d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.nav-bar .search-logo {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.nav-bar .search-logo .logo {
+  padding-right: 20px;
+}
+.nav-bar .search-logo #search-bar {
+  padding: 8px 8px;
+  width: 60%;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-size: 1rem;
+}
+.nav-bar .nav-items {
+  flex-grow: 1;
+  height: 100%;
+}
+.nav-bar .nav-items .menu {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+}
+.nav-bar .nav-items .menu .item {
+  height: 100%;
+  list-style: none;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav-bar .nav-items .menu .item > a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=navbar.css.map */
