@@ -27,6 +27,14 @@
   padding: 10px 40px;
 }
 
+.btn-form {
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 5px 0 rgba(195, 7, 63, 0.5), 0 0 5px 0 rgba(195, 7, 63, 0.5);
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
 .btn-card {
   width: max-content;
   padding: 10px 25px;
@@ -78,6 +86,57 @@
 
 .highlight {
   color: #c3073f;
+}
+
+.inputs-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.inputs-div > aside {
+  padding-top: 10px;
+  width: 15vw;
+}
+
+.input-field {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+
+input {
+  background: white;
+  font-size: 1.2rem;
+  border-style: none;
+  outline-style: none;
+  border-radius: 10px;
+  box-shadow: inset 4px 4px 5px -4px #000000, inset -4px -4px 5px -4px #000000;
+}
+input:focus:valid {
+  border: 1px solid #07ce07;
+}
+input:focus:invalid {
+  border: 1px solid red;
+}
+
+.small-input-field > * > h3 {
+  padding-bottom: 12px;
+}
+.small-input-field > * > h3::after {
+  content: "*";
+  color: red;
+}
+.small-input-field .small-input {
+  width: 50%;
+  padding: 10px 20px;
 }
 
 .banner {
