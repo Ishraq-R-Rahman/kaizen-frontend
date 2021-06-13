@@ -36,7 +36,7 @@
 }
 
 .btn-card {
-  width: max-content;
+  width: 80%;
   padding: 10px 25px;
   border-radius: 10px;
   box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
@@ -142,12 +142,22 @@ input:focus:invalid {
 .banner {
   width: 100vw;
   height: 60vh;
-  background: url("../images/home.jpg") no-repeat center/cover;
   margin-bottom: 20px;
   position: relative;
   text-align: center;
   color: white;
   font-family: "Staatliches", cursive;
+  background: rgba(0, 0, 0, 0.95);
+}
+.banner::before {
+  content: "";
+  background: url("../images/home.jpg") no-repeat center/cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.65;
 }
 .banner .text-box {
   left: 20%;
@@ -164,9 +174,11 @@ input:focus:invalid {
   align-items: center;
 }
 .banner .text-box p {
-  text-shadow: 0px -4px 32px #000000;
-  filter: drop-shadow(0 0 60px black);
+  text-shadow: 0px -4px 70px white;
+  filter: drop-shadow(0 0 10px black);
   padding-bottom: 20px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
 }
 .banner .text-box a {
   text-decoration: none;
