@@ -144,41 +144,42 @@ input:focus:invalid {
   height: 60vh;
   margin-bottom: 20px;
   position: relative;
-  text-align: center;
+  text-align: left;
   color: white;
   font-family: "Staatliches", cursive;
   background: rgba(0, 0, 0, 0.95);
 }
 .banner::before {
   content: "";
-  background: url("../images/home.jpg") no-repeat center/cover;
+  background: url("../images/home-3.jpg") no-repeat center/cover;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.65;
+  opacity: 1;
 }
 .banner .text-box {
-  left: 20%;
+  left: 0%;
   height: calc(100% - 2vh);
   position: absolute;
   font-size: 2.5rem;
   margin-left: 10vw;
   margin-top: 2vh;
-  text-align: center;
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 .banner .text-box p {
-  text-shadow: 0px -4px 70px white;
-  filter: drop-shadow(0 0 10px black);
+  outline-style: dashed;
+  outline-offset: 24px;
+  outline-width: 4px;
+  outline-color: #c3073f;
+  color: black;
   padding-bottom: 20px;
-  -webkit-text-stroke-width: 0.7px;
-  -webkit-text-stroke-color: black;
 }
 .banner .text-box a {
   text-decoration: none;
