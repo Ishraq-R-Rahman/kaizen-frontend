@@ -2,14 +2,15 @@
     padding: 0 30px;
 }
 
-.show {
+.menu-active {
     border-bottom: 5px solid $secondary-color;
 }
 
-.hide {
+.menu-inactive {
     border-bottom: 5px solid $primary-color;
 }
 
+// Basically highlights an item like amount in user-card 
 .highlight {
     color: $secondary-color;
 }
@@ -81,5 +82,47 @@ input {
     .small-input {
         width: 50%;
         padding: 10px 20px;
+    }
+}
+
+// Basically shows the title of the page
+.title-card {
+    font-family: 'Staatliches' , cursive ;
+
+    margin-bottom: 20px;
+
+    font-size: 1.5rem;
+
+    & > p {
+        font-size: 1.2rem;
+        width: 50%;
+        font-family: 'Dosis', sans-serif;
+        opacity: 0.5;
+    }
+
+    padding-bottom: 30px;
+    border-bottom: 2px dashed rgb(109, 105, 105);
+}
+
+.text-area-input-field {
+    & > * > h3::after {
+        content: '*';
+        color: red;
+    }
+}
+
+.text-area-input {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    resize: none;
+}
+
+// For buttons input field
+.buttons {
+    a {
+        font-family: 'Staatliches',cursive;
+        text-decoration: none;
     }
 }

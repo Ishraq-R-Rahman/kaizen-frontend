@@ -171,75 +171,49 @@ input:focus:invalid {
   text-decoration: none;
 }
 
-.main {
-  font-family: "Staatliches", cursive;
+.hide {
+  visibility: hidden;
 }
 
-.icon {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px dashed #c3073f;
-  margin-bottom: 40px;
-  color: #333;
+.remove {
+  display: none;
 }
 
-.registration {
-  margin-left: 10vw;
-  margin-right: 10vw;
+.loan-request-card {
+  background-color: white;
+  position: absolute;
+  top: 25%;
+  left: 32%;
+  width: 615px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5), -1px -1px 15px 2px rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
 }
-
-.form {
-  padding-top: 10vh;
+.loan-request-card .form {
   font-family: "Dosis", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
-.form .full-name > * > p {
+.loan-request-card .form > * > aside > p {
   visibility: hidden;
   font-size: 1rem;
   opacity: 0.5;
 }
-.form .full-name:hover > * > p {
+.loan-request-card .form > * > .input-field {
+  padding-bottom: 20px;
+}
+.loan-request-card .form > * > .input-field > *::-webkit-inner-spin-button, .loan-request-card .form > * > .input-field > *::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.loan-request-card .form:hover > * > aside > p {
   visibility: visible;
 }
-.form .full-name > * > h3::after {
-  content: "*";
-  color: red;
-}
-.form .full-name .name-input {
-  width: 100%;
-  padding: 10px 20px;
-}
-.form .account-type {
-  padding-bottom: 120px;
-}
-.form .account-type > * > h3 {
-  padding-bottom: 12px;
-}
-.form .account-type > * > h3::after {
-  content: "*";
-  color: red;
-}
-.form .account-type .custom-select {
-  width: 50%;
-}
-.form .account-type .custom-select select {
-  font-size: 1.4rem;
-  width: 50%;
-  padding: 10px 10px;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-}
-.form .account-type .custom-select select:focus {
-  background: #c3073f;
-  color: white;
-}
-.form .account-type .custom-select select option {
-  background: white;
-  color: #1a1a1d;
-}
-.form .account-type .custom-select select option:hover {
-  background: #950740;
-  color: white;
-}/*# sourceMappingURL=registration.css.map */
+
+.temp-button {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 200px;
+  height: 50px;
+}/*# sourceMappingURL=loanRequest.css.map */

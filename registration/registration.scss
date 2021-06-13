@@ -25,21 +25,6 @@
     margin-right: 10vw;
 }
 
-.title-card {
-    margin-bottom: 20px;
-
-    font-size: 1.5rem;
-
-    & > p {
-        font-size: 1.2rem;
-        width: 50%;
-        font-family: 'Dosis', sans-serif;
-        opacity: 0.5;
-    }
-
-    padding-bottom: 30px;
-    border-bottom: 2px dashed rgb(109, 105, 105);
-}
 
 .form {
     padding-top: 10vh;
@@ -126,12 +111,5 @@
 
         }
         padding-bottom: 120px;
-    }
-
-    .buttons {
-        a {
-            font-family: 'Staatliches',cursive;
-            text-decoration: none;
-        }
     }
 }

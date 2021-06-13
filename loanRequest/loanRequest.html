@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbafa5c523.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/loanRequest.css">
+    <title>Post A Request Pop Up Card</title>
+</head>
+<body>
+    <div class="buttons temp-button">
+        <div class="btn-card btn-dark" onclick="myFunction()">Make A Loan Request</div>
+    </div>
+    <div class="loan-request-card content-box remove" id="popup-contract">
+        <div class="title-card">
+            <h1>Post A Loan Request</h1>
+        </div>
+        <div class="form">
+            <!-- Amount -->
+            <div class="small-input-field inputs-div">
+                <aside>
+                    <h3>Loan Amount</h3>
+                    <p>Between (1000 - 10000 bdt)</p>
+                </aside>
+                <div class="input-field">
+                    <input type="number" class="small-input" max="10000" min="1000" required>
+                </div>
+            </div>
+
+            <!-- Details of the loan -->
+            <div class="text-area-input-field inputs-div">
+                <aside>
+                    <h3>Why Do You Need The Loan?</h3>
+                    <p>Max 140 Characters</p>
+                </aside>
+                <div class="input-field">
+                    <!-- <input type="text" class="small-input" max="10000" min="1000" required> -->
+                    <textarea class="text-area-input" cols="20" rows="5" maxlength="140" minlength="1"></textarea>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons inputs-div">
+                <a href="#" class="btn-form btn-light">Cancel</a>
+                <a href="#" class="btn-form btn-dark">Post</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        let popup = document.getElementById("popup-contract");
+        popup.classList.toggle("remove");
+    }
+</script>
+</html>

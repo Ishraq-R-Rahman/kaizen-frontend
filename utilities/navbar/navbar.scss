@@ -2,6 +2,7 @@
 @import '../../utilities/variables';
 @import '../../utilities/buttons';
 @import '../../utilities/small_utilities';
+@import '../../utilities/displays';
 
 .nav-bar {
   z-index: 2;
@@ -82,7 +83,7 @@
 
 .hidden-menu {
   z-index: 3;
-  display: none;
+  // display: none;
 
   font-family: 'Staatliches', cursive;
   font-size: 1.2rem;
