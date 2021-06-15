@@ -219,6 +219,33 @@ input:focus:invalid {
   justify-content: center;
   align-items: center;
 }
+.user-info .bkash::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.5rem;
+  width: 10px;
+  height: 10px;
+}
+.user-info .bkash::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0;
+  top: -2.6rem;
+  font-size: 0.8rem;
+  background: white;
+  border: 1px solid #c3073f;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0;
+  width: 180px;
+  height: max-content;
+  opacity: 0;
+  color: #4e4e50;
+}
+.user-info .bkash:hover::after, .user-info .bkash:hover::before {
+  opacity: 1;
+}
 .user-info .description {
   padding-left: 40px;
   padding-top: 20px;
@@ -233,6 +260,31 @@ input:focus:invalid {
   font-size: 1rem;
   color: green;
   padding-left: 10px;
+  position: relative;
+}
+.user-info .description h1 i::after {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -1rem;
+  left: 2.6rem;
+  font-size: 0.6rem;
+  background: white;
+  border: 1px solid #c3073f;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 10px;
+  width: max-content;
+  height: max-content;
+  opacity: 0;
+  color: black;
+  letter-spacing: 0;
+  font-style: italic;
+}
+.user-info .description h1 i:hover::after {
+  opacity: 0.8;
 }
 .user-info .description p:nth-of-type(1) {
   color: #4e4e50;
