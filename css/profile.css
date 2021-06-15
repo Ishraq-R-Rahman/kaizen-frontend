@@ -351,4 +351,120 @@ input:focus:invalid {
 }
 .user-info .description .hidden-details .item:hover .value {
   display: block;
+}
+
+.loan-contract-info {
+  margin: 50px;
+  position: absolute;
+}
+.loan-contract-info .loan-info {
+  font-family: "Dosis", sans-serif;
+  margin-top: 2rem;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: #c3073f;
+  outline-offset: 2px;
+}
+.loan-contract-info .loan-info h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 2.6rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  flex-basis: 100%;
+}
+.loan-contract-info .loan-info p {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+  width: max-content;
+  display: inline-block;
+}
+.loan-contract-info .loan-info p::before {
+  content: open-quote;
+}
+.loan-contract-info .loan-info p::after {
+  content: close-quote;
+}
+.loan-contract-info .loan-info p::before, .loan-contract-info .loan-info p::after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #c3073f;
+  font-size: 2rem;
+  top: 0.2rem;
+  position: relative;
+}
+.loan-contract-info .loan-info cite {
+  align-self: flex-end;
+  color: #c3073f;
+}
+.loan-contract-info .loan-info .loan-data {
+  width: 50%;
+  margin-top: 20px;
+  border-top: 1px solid lightgrey;
+  padding-top: 10px;
+  flex-basis: 100%;
+  padding-left: 20px;
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.loan-contract-info .loan-info .loan-data .item {
+  padding: 10px;
+  margin: 0 10px;
+  text-align: center;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) {
+  border-bottom: 1px solid #6f2232;
+  border-right: 1px solid #6f2232;
+  display: flex;
+  justify-content: center;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .total .field {
+  color: #c3073f;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .collected {
+  display: none;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover {
+  background-color: #c3073f;
+  color: white;
+  border-radius: 10px 0 0 0;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .total {
+  display: none;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .collected {
+  display: inline-block;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .collected .value {
+  color: yellow;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2) {
+  border-bottom: 1px solid #6f2232;
+  border-left: 1px solid #6f2232;
+  display: flex;
+  justify-content: center;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2) .next-installment .field {
+  color: #c3073f;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2) .expiration {
+  display: none;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2):hover {
+  background-color: #c3073f;
+  color: white;
+  border-radius: 0 10px 0 0;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2):hover .next-installment {
+  display: none;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2):hover .expiration {
+  display: inline-block;
+}
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(2):hover .expiration .value {
+  color: yellow;
 }/*# sourceMappingURL=profile.css.map */

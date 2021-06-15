@@ -210,3 +210,152 @@
     }
 }
     
+.loan-contract-info {
+    margin: 50px;
+    position: absolute;
+    
+    .loan-info {
+        font-family: 'Dosis' , sans-serif;
+        
+        margin-top: 2rem;
+        padding: 20px;
+    
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+    
+        outline-width: 2px;
+        outline-style: dashed;
+        outline-color: $secondary-color;
+        outline-offset: 2px;
+        
+    
+        h1 {
+            font-family: 'Staatliches', cursive;
+            font-size: 2.6rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+            flex-basis: 100%;
+        }
+    
+        p {
+            
+            padding-left: 20px;
+            padding-bottom: 20px;
+            font-size: 1.4rem;
+            width: max-content;
+            display: inline-block;
+    
+            &::before {
+                content: open-quote;
+            }
+    
+            &::after {
+                content: close-quote;
+            }
+    
+            &::before, &::after {
+                display: inline-block;
+                vertical-align: bottom;
+                color: $secondary-color;
+                font-size: 2rem;
+                top: 0.2rem;
+                position: relative;
+            }
+        }
+    
+        cite {
+            align-self: flex-end;
+            color: $secondary-color;
+    
+        }
+    
+        .loan-data {
+            width: 50%;
+            margin-top: 20px;
+            border-top: 1px solid lightgrey;
+            padding-top: 10px;
+            flex-basis: 100%;
+            padding-left: 20px;
+            font-size: 1.4rem;
+    
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+    
+            .item {
+                padding: 10px;
+                margin: 0 10px;
+                text-align: center;
+    
+                &:nth-of-type(1) {
+                    border-bottom: 1px solid $light-color;
+                    border-right: 1px solid $light-color;
+                    
+                    display: flex;
+                    justify-content: center;
+                    .total {
+                        .field {
+                            color: $secondary-color;
+                        }
+                    }
+                    .collected {
+                        display: none;
+                        
+                    }
+    
+    
+                    &:hover {
+                        background-color: $secondary-color;
+                        color: white;
+                        border-radius: 10px 0 0 0;
+                        .total {
+                            display: none;
+                        }
+                        .collected {
+                            display: inline-block;
+                            
+                            .value {
+                                color:  yellow;
+                            }
+                        }
+    
+                    }
+                }
+                &:nth-of-type(2) {
+                    border-bottom: 1px solid $light-color;
+                    border-left: 1px solid $light-color;
+    
+                    display: flex;
+                    justify-content: center;
+                    .next-installment {
+                        .field {
+                            color: $secondary-color;
+                        }
+                    }
+                    .expiration {
+                        display: none;
+                        
+                    }
+    
+    
+                    &:hover {
+                        background-color: $secondary-color;
+                        color: white;
+                        border-radius: 0 10px 0 0;
+                        .next-installment {
+                            display: none;
+                        }
+                        .expiration {
+                            display: inline-block;
+                            
+                            .value {
+                                color:  yellow;
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+}
