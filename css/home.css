@@ -197,7 +197,7 @@ input:focus:invalid {
   position: absolute;
   font-size: 2.5rem;
   margin-left: 10vw;
-  margin-top: 2vh;
+  margin-top: calc(2vh - 10px);
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -327,6 +327,9 @@ input:focus:invalid {
 }
 .receiver-list .user-item .user-card .user-info .buttons a {
   text-decoration: none;
+}
+.receiver-list .user-item .user-card:hover {
+  cursor: pointer;
 }
 
 .footer {
