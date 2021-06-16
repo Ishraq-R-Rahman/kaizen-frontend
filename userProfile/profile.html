@@ -35,8 +35,8 @@
         </div>
         <!-- Only one of these will be displayed -->
         <div class="loan-contract-info content-box">
-            <div class="loan-info remove">
-                <h1>Loan Request</h1>
+            <div class="loan-info">
+                <h1>Loan Information</h1>
                 <p>I want loan because I need treatment. I want to live and I want to be healthy again. </p>
                 <cite>- 01/01/2021 <br> </cite>
                 <div class="loan-data">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="no-loan-info">
+            <div class="no-loan-info remove">
                 <h1>Loan Request</h1>
                 <div><p>You have no active loan request at this moment.</p> </div>
             </div>
@@ -129,7 +129,7 @@
             </div>
             <div class="no-loan-buttons">
                 <div class="buttons">
-                    <a href="#" class="btn-profile btn-dark" onclick="popup()">Post A Request</a>
+                    <a href="#!" class="btn-profile btn-dark" onclick="popup()">Post A Request</a>
                 </div>
             </div>
             <div class="contract-buttons remove">
@@ -143,6 +143,61 @@
                     <a href="#" class="btn-profile btn-dark">Extend Contract</a>
                 </div>
             </div>
+        </div>
+
+        <!-- Side scroll sections -->
+        <div class="side-scroll-section content-box">
+            <div class="accepted-requests">
+                <h1>Current Lenders</h1>
+                <div class="user-cards">
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card-profile">2</div>
+                    <div class="card-profile">3</div>
+                    <div class="card-profile">4</div>
+                    <div class="card-profile">5</div> -->
+                </div>
+            </div>
+            
         </div>
 
         <!-- Footer -->
@@ -162,10 +217,10 @@
                 <aside>
                     <h3>Loan Amount</h3>
                     <p>Between (1000 - 10000 bdt)</p>
-                    <p> +5% interest-rate applies</p>
+                    <p> +<span class="interest">5%</span> interest-rate applies</p>
                 </aside>
                 <div class="input-field">
-                    <input type="number" class="small-input" max="10000" min="1000" required data-tooltip="+ 5% interest-rate">
+                    <input type="number" class="small-input" max="10000" min="1000" required>
                 </div>
             </div>
 
@@ -183,7 +238,7 @@
 
             <!-- Buttons -->
             <div class="buttons inputs-div">
-                <a href="#" class="btn-form btn-light" onclick="popup()">Cancel</a>
+                <a href="#!" class="btn-form btn-light" onclick="popup()">Cancel</a>
                 <a href="#" class="btn-form btn-dark">Post</a>
             </div>
         </div>
