@@ -72,6 +72,15 @@
   color: white;
 }
 
+.btn-profile {
+  display: inline-block;
+  width: 400px;
+  height: 100%;
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
+}
+
 .content-box {
   padding: 0 30px;
 }
@@ -172,11 +181,11 @@ input:focus:invalid {
 }
 
 .hide {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .remove {
-  display: none;
+  display: none !important;
 }
 
 .nav-bar {

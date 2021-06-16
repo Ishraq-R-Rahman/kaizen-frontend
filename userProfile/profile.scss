@@ -214,7 +214,7 @@
     
 .loan-contract-info {
     margin: 50px;
-    position: absolute;
+    // position: absolute;
     
     .loan-info {
         font-family: 'Dosis' , sans-serif;
@@ -628,7 +628,7 @@
                             color: $secondary-color;
                         }
                     }
-                    .expiration {
+                    .amount {
                         display: none;
                         
                     }
@@ -641,7 +641,7 @@
                         .next-installment {
                             display: none;
                         }
-                        .expiration {
+                        .amount {
                             display: inline-block;
                             
                             .value {
@@ -656,7 +656,7 @@
                     border-right: 1px solid $light-color;
                     position: relative;
 
-                    .progress-values {
+                    .installment-values {
                         width: 100%;
                         height: 100%;
 
@@ -724,12 +724,12 @@
     
                     display: flex;
                     justify-content: center;
-                    .current-lenders {
+                    .interest-rate {
                         .field {
                             color: $secondary-color;
                         }
                     }
-                    .total-request {
+                    .default {
                         display: none;
                         
                     }
@@ -739,10 +739,10 @@
                         background-color: $secondary-color;
                         color: white;
                         border-radius: 0 0 10px 0;
-                        .current-lenders {
+                        .interest-rate {
                             display: none;
                         }
-                        .total-request {
+                        .default {
                             display: inline-block;
                             
                             .value {
@@ -754,5 +754,52 @@
                 }
             }
         }
+    }
+}
+
+.buttons-list {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    
+    // this is to control other non displayed divs
+    display: flex;
+    
+    & > * {
+        width: 100%;
+        height: 100%;
+
+        font-size: 1.8rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    background: $primary-color;
+
+    font-family: 'Staatliches',cursive;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 1rem;
+
+    p {
+        font-size: 1.8rem;
+        border-bottom: 2px solid $secondary-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 }

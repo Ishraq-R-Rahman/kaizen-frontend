@@ -1,10 +1,10 @@
 
 // will be used in cases where we want the element to cover the area but be invisible
 .hide {
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 // will be removed from the page like buttons being replace with another one
 .remove {
-    display: none;
+    display: none !important;
 }
