@@ -119,7 +119,7 @@
         </div>
     
         <!-- Buttons -->
-        <div class="buttons-list content-box">
+        <div class="buttons-list content-box remove">
     
             <div class="loan-buttons remove">
                 <!-- thses buttons will only show when the lender is viewing the receiver profile -->
@@ -127,7 +127,7 @@
                     <a href="#" class="btn-profile btn-dark">Offer Contract</a>
                 </div>
             </div>
-            <div class="no-loan-buttons">
+            <div class="no-loan-buttons remove">
                 <div class="buttons">
                     <a href="#!" class="btn-profile btn-dark" onclick="popup()">Post A Request</a>
                 </div>
@@ -146,9 +146,9 @@
         </div>
 
         <!-- Side scroll sections -->
-        <div class="side-scroll-section content-box">
+        <div class="current-lenders-section content-box">
             <div class="accepted-requests">
-                <h1>Current Lenders</h1>
+                <h1>Current Lenders<i class="fas fa-flag-checkered remove" data-tooltip="Reached Your Limit For Lenders"></i></h1>
                 <div class="user-cards">
                     <div class="card-profile">
                         <div class="photo-space"></div>
@@ -190,14 +190,280 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="card-profile">2</div>
-                    <div class="card-profile">3</div>
-                    <div class="card-profile">4</div>
-                    <div class="card-profile">5</div> -->
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-profile">
+                        <div class="photo-space"></div>
+                        <div class="user-info">
+                            <div class="name">
+                               Dummy Username
+                            </div>
+                            <div class="loan-contract-details">
+                                <div class="item">
+                                    <div class="total">
+                                        <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                                    </div>
+                                    <div class="collected">
+                                        <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="next-installment">
+                                        <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                     <div class="installment-values">
+                                         <div class="centering">
+                                            <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                         </div>
+                                     </div>
+                                </div>
+                                <div class="item">
+                                    <div class="interest-rate">
+                                        <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                                    </div>
+                                    <div class="default">
+                                        <span class="field">My Defaults: </span> <span class="value">0 times</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-buttons-list">
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                            </div>
+                            <div class="buttons">
+                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                            </div>
+                            <div class="buttons remove">
+                                <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
 
         <!-- Footer -->
@@ -206,7 +472,8 @@
             <a href="#"><i class="fab fa-github fa-2x"></i></a>
         </div>
     </main>
-
+    
+    <!-- Popup -->
     <div class="loan-request-card content-box remove" id="popup-request">
         <div class="title-card">
             <h1>Post A Loan Request</h1>

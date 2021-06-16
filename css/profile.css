@@ -94,6 +94,15 @@
   box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
 }
 
+.small-btn-profile {
+  display: inline-block;
+  width: max-content;
+  height: 100%;
+  padding: 8px 50px;
+  border-radius: 5px;
+  box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
+}
+
 .content-box {
   padding: 0 30px;
 }
@@ -194,12 +203,45 @@ input:focus:invalid {
   text-decoration: none;
 }
 
+.buttons-list {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.buttons-list > * {
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.small-buttons-list {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.small-buttons-list > * {
+  height: 100%;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
 .card-profile {
   width: 100%;
   height: max-content;
   border-radius: 5px;
   box-shadow: -4px -4px 16px -5px #000000, 4px 4px 16px -5px #000000;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in;
 }
 .card-profile .photo-space {
   border-radius: 5px 5px 0 0;
@@ -217,7 +259,7 @@ input:focus:invalid {
 .card-profile .user-info .name {
   width: 100%;
   font-family: "Staatliches", cursive;
-  border-bottom: 2px dashed #c3073f;
+  border-bottom: 1.5px dashed #c3073f;
 }
 .card-profile .user-info .loan-contract-details {
   width: 100%;
@@ -225,6 +267,7 @@ input:focus:invalid {
   border-top: 1px solid lightgrey;
   padding-left: 5px;
   font-size: 0.7rem;
+  border-bottom: 1.5px dashed #c3073f;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -368,6 +411,10 @@ input:focus:invalid {
 }
 .card-profile .user-info .loan-contract-details .item:nth-of-type(4):hover .default .value {
   color: yellow;
+}
+.card-profile:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .banner {
@@ -993,26 +1040,11 @@ input:focus:invalid {
   color: yellow;
 }
 
-.buttons-list {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 50px;
-  display: flex;
+.current-lenders-section {
+  margin: 25px;
+  padding: 50px;
 }
-.buttons-list > * {
-  width: 100%;
-  height: 100%;
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
-
-.side-scroll-section {
-  margin: 50px;
-}
-.side-scroll-section .accepted-requests {
+.current-lenders-section .accepted-requests {
   font-family: "Dosis", sans-serif;
   margin-top: 2rem;
   padding: 20px;
@@ -1023,20 +1055,44 @@ input:focus:invalid {
   outline-color: #c3073f;
   outline-offset: 2px;
 }
-.side-scroll-section .accepted-requests h1 {
+.current-lenders-section .accepted-requests h1 {
   width: 100%;
   font-family: "Staatliches", cursive;
   font-size: 2.6rem;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
 }
-.side-scroll-section .accepted-requests .user-cards {
+.current-lenders-section .accepted-requests h1 i {
+  padding-left: 20px;
+  position: absolute;
+}
+.current-lenders-section .accepted-requests h1 i::after {
+  font-family: "Dosis", cursive;
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 4rem;
+  top: -1.6rem;
+  font-size: 0.8rem;
+  background: white;
+  border: 1px solid #c3073f;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0;
+  width: 140px;
+  height: max-content;
+  opacity: 0;
+  color: #c3073f;
+}
+.current-lenders-section .accepted-requests h1 i:hover::after, .current-lenders-section .accepted-requests h1 i:hover::before {
+  opacity: 1;
+}
+.current-lenders-section .accepted-requests .user-cards {
   padding: 20px 0;
   flex-basis: 100%;
   height: max-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .loan-request-card {

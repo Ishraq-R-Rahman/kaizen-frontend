@@ -798,30 +798,11 @@
 
 
 
-.buttons-list {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 50px;
-    
-    // this is to control other non displayed divs
-    display: flex;
-    
-    & > * {
-        width: 100%;
-        height: 100%;
 
-        font-size: 1.8rem;
 
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-.side-scroll-section {
-    margin: 50px;
-    // width: 80vw;
+.current-lenders-section {
+    margin: 25px;
+    padding: 50px;
 
     .accepted-requests {
         font-family: 'Dosis' , sans-serif;
@@ -847,6 +828,36 @@
             font-size: 2.6rem;
             padding-bottom: 10px;
             border-bottom: 1px solid lightgray;
+            
+            i {
+                padding-left: 20px;
+                position: absolute;
+
+                
+                &::after {
+                    font-family: 'Dosis',cursive;
+                    // font-style: italic;
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    left: 4rem;
+                    top: -1.6rem;
+                    font-size: 0.8rem;
+                    background: white;
+                    border: 1px solid $secondary-color;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: 10px 0;
+                    width: 140px;
+                    height: max-content;
+                    opacity: 0;
+                    color: $secondary-color;
+                }
+        
+                &:hover::after, 
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
         }
 
         .user-cards {
@@ -856,8 +867,7 @@
 
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            gap: 1rem;
-
+            gap: 2rem;
         }
     
         

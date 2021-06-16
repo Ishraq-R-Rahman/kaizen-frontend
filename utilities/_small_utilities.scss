@@ -128,6 +128,49 @@ input {
     }
 }
 
+.buttons-list {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    
+    // this is to control other non displayed divs
+    display: flex;
+    
+    & > * {
+        width: 100%;
+        height: 100%;
+
+        font-size: 1.8rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.small-buttons-list {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    
+    // this is to control other non displayed divs
+    display: flex;
+    justify-content: space-around;
+    
+    & > * {
+        // width: 100%;
+        height: 100%;
+
+        font-size: 0.8rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 
 .card-profile {
     // border: 1px solid black;
@@ -136,6 +179,7 @@ input {
     border-radius: 5px;
     box-shadow: -4px -4px 16px -5px #000000 , 4px 4px 16px -5px #000000;
     font-size: 1.2rem ;
+    transition: all 0.2s ease-in;
     
     .photo-space {
         border-radius: 5px 5px 0 0;
@@ -153,7 +197,7 @@ input {
         .name {
             width: 100%;
             font-family: 'Staatliches',cursive;
-            border-bottom: 2px dashed $secondary-color;
+            border-bottom: 1.5px dashed $secondary-color;
         }
 
         .loan-contract-details {
@@ -164,6 +208,8 @@ input {
             // flex-basis: 100%;
             padding-left: 5px;
             font-size: 0.7rem;
+            border-bottom: 1.5px dashed $secondary-color;
+
     
             display: grid;
             grid-template-columns: repeat(2 , 1fr);
@@ -350,4 +396,9 @@ input {
         }
     }
 
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
 }
+
