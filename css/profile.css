@@ -13,6 +13,11 @@
   display: none !important;
 }
 
+.background-blur {
+  pointer-events: none;
+  filter: blur(10px);
+}
+
 .content-box {
   padding: 0 30px;
 }
@@ -181,9 +186,9 @@ input:focus:invalid {
 
 .btn-profile {
   display: inline-block;
-  width: 400px;
+  width: max-content;
   height: 100%;
-  padding: 10px 25px;
+  padding: 10px 60px;
   border-radius: 10px;
   box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
 }
@@ -604,6 +609,40 @@ input:focus:invalid {
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
   flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+.loan-contract-info .contract-info h1 i {
+  padding-right: 80px;
+  color: #9d9d09;
+  font-size: 1.8rem;
+  align-self: flex-end;
+  position: absolute;
+  left: auto;
+}
+.loan-contract-info .contract-info h1 i::after {
+  font-family: "Dosis", cursive;
+  font-style: italic;
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 1.4rem;
+  top: -1.6rem;
+  font-size: 0.8rem;
+  background: red;
+  border: 1px solid red;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0;
+  width: 140px;
+  height: max-content;
+  opacity: 0;
+  color: white;
+}
+.loan-contract-info .contract-info h1 i:hover::after, .loan-contract-info .contract-info h1 i:hover::before {
+  opacity: 1;
 }
 .loan-contract-info .contract-info p {
   padding-left: 20px;
@@ -791,6 +830,37 @@ input:focus:invalid {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+}
+
+.loan-request-card {
+  background-color: white;
+  position: absolute;
+  top: 60%;
+  left: 32%;
+  width: 615px;
+  height: 580px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5), -1px -1px 15px 2px rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+}
+.loan-request-card .form {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
+}
+.loan-request-card .form > * > aside > p {
+  visibility: hidden;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+.loan-request-card .form > * > .input-field {
+  padding-bottom: 20px;
+}
+.loan-request-card .form > * > .input-field > *::-webkit-inner-spin-button, .loan-request-card .form > * > .input-field > *::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.loan-request-card .form:hover > * > aside > p {
+  visibility: visible;
 }
 
 .footer {

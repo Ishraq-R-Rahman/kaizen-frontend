@@ -8,3 +8,8 @@
 .remove {
     display: none !important;
 }
+
+.background-blur {
+    pointer-events: none;
+    filter: blur(10px);
+}
