@@ -246,7 +246,6 @@ input:focus:invalid {
 .card-profile .user-info .name {
   width: 100%;
   font-family: "Staatliches", cursive;
-  border-bottom: 1.5px dashed #c3073f;
 }
 .card-profile .user-info .loan-contract-details {
   width: 100%;
@@ -402,6 +401,13 @@ input:focus:invalid {
 .card-profile:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.review-card {
+  width: 100%;
+  height: max-content;
+  box-shadow: -4px -4px 16px -5px #000000, 4px 4px 16px -5px #000000;
+  padding: 20px;
 }
 
 .main {

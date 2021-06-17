@@ -197,7 +197,7 @@ input {
         .name {
             width: 100%;
             font-family: 'Staatliches',cursive;
-            border-bottom: 1.5px dashed $secondary-color;
+            // border-bottom: 1.5px dashed $secondary-color;
         }
 
         .loan-contract-details {
@@ -402,3 +402,11 @@ input {
     }
 }
 
+.review-card {
+    width: 100%;
+    height: max-content;
+    box-shadow: -4px -4px 16px -5px #000000 , 4px 4px 16px -5px #000000;
+    
+    padding: 20px;
+
+}

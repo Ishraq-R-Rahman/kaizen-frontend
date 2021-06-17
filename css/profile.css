@@ -259,7 +259,6 @@ input:focus:invalid {
 .card-profile .user-info .name {
   width: 100%;
   font-family: "Staatliches", cursive;
-  border-bottom: 1.5px dashed #c3073f;
 }
 .card-profile .user-info .loan-contract-details {
   width: 100%;
@@ -415,6 +414,13 @@ input:focus:invalid {
 .card-profile:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.review-card {
+  width: 100%;
+  height: max-content;
+  box-shadow: -4px -4px 16px -5px #000000, 4px 4px 16px -5px #000000;
+  padding: 20px;
 }
 
 .banner {
@@ -1093,6 +1099,180 @@ input:focus:invalid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+.review-section {
+  margin: 72px;
+  padding: 50px;
+  height: max-content;
+  font-family: "Dosis", sans-serif;
+  padding: 20px;
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: #c3073f;
+  outline-offset: 2px;
+}
+.review-section .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+.review-section .title h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 2.6rem;
+}
+.review-section .title p {
+  font-size: 2rem;
+}
+.review-section .title p i {
+  padding-right: 0.5rem;
+  color: #c3073f;
+}
+.review-section .reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px 0;
+  position: relative;
+}
+.review-section .reviews .review-title {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+}
+.review-section .reviews .review-title p {
+  font-size: 1.4rem;
+}
+.review-section .reviews .review-title p i {
+  padding-right: 0.5rem;
+  color: #950740;
+}
+.review-section .reviews .review-comment {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  padding: 20px;
+  border-bottom: 2px dashed lightgray;
+}
+.review-section .reviews .review-comment p {
+  display: inline-block;
+}
+.review-section .reviews .review-comment p::before {
+  content: open-quote;
+}
+.review-section .reviews .review-comment p::after {
+  content: close-quote;
+}
+.review-section .reviews .review-comment p::before, .review-section .reviews .review-comment p::after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #c3073f;
+  font-size: 2.8rem;
+  top: 0.2rem;
+  left: -0.2rem;
+  position: relative;
+}
+@keyframes visualize {
+  0% {
+    opacity: 0;
+    position: absolute;
+  }
+  50% {
+    opacity: 0;
+    position: relative;
+  }
+  75% {
+    opacity: 0.5;
+    position: relative;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+  }
+}
+.review-section .reviews .hide-contract .hidden-contract {
+  transition: transform 0.8s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(120%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #c3073f;
+  border-top: 2px dashed #c3073f;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details > * {
+  padding: 10px 0;
+  flex-grow: 1;
+  border-bottom: 2px solid #6f2232;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details > * .field {
+  color: #c3073f;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .amount {
+  border-right: 2px solid #6f2232;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .amount:hover {
+  background: #4e4e50;
+  color: white;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .amount:hover .field {
+  color: inherit;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .amount:hover .value {
+  color: yellow;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .issue-date {
+  border-left: 2px solid #6f2232;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .issue-date:hover {
+  background: #4e4e50;
+  color: white;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .issue-date:hover .field {
+  color: inherit;
+}
+.review-section .reviews .hide-contract .hidden-contract .contract-details .issue-date:hover .value {
+  color: yellow;
+}
+.review-section .reviews .hide-contract:hover .hidden-contract {
+  animation-name: visualize;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  transform: translateX(0%);
+}
+.review-section .reviews .hide-contract:hover .down-arrow i {
+  transform: rotate(180deg);
+}
+.review-section .reviews .hide-contract .down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  color: #c3073f;
+  font-size: 1.2rem;
+}
+.review-section .reviews .hide-contract .down-arrow i {
+  transition: all 0.5s ease-in-out;
 }
 
 .loan-request-card {
