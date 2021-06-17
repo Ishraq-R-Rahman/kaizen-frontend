@@ -894,6 +894,8 @@
         text-align: center;
         
         border-bottom: 1px solid lightgray;
+        margin-bottom: 20px;
+        
 
         h1 {
             // width: 100%;
@@ -942,13 +944,20 @@
     }
 
     .reviews {
+        top: 0;
         width: 100%;
-        // height: max-content;
+        height: 600px;
+        overflow: scroll;
+        scrollbar-color: $secondary-color white;
         display: flex;
         flex-direction: column;
+        
+        border: 0.5px dotted $light-color;
         gap: 1rem;
         padding: 20px 0;
         position: relative;
+        // box-shadow: inset -1px 9px 36px -11px lightgray;
+        border-radius: 10px;
     }
 }
 

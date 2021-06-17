@@ -403,10 +403,12 @@ input {
 }
 
 .review-card {
+    // this is needed otherwise won't show the top items. problem with flex
+    margin: auto;
     &:hover {
         cursor: pointer;
     }
-    width: 100%;
+    width: 96%;
     height: max-content;
     box-shadow: -4px -4px 16px -5px #000000 , 4px 4px 16px -5px #000000;
     
@@ -590,5 +592,22 @@ input {
             }
             
         }
+    }
+}
+
+.scroller {
+    &::-webkit-scrollbar {
+        width: .4rem;   
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;
+        border-radius: 10px;
+        // outline: 1px solid $light-color;
     }
 }

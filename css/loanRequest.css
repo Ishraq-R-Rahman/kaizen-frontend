@@ -404,7 +404,8 @@ input:focus:invalid {
 }
 
 .review-card {
-  width: 100%;
+  margin: auto;
+  width: 96%;
   height: max-content;
   box-shadow: -4px -4px 16px -5px #000000, 4px 4px 16px -5px #000000;
   padding: 20px;
@@ -549,6 +550,18 @@ input:focus:invalid {
 }
 .review-card .hide-contract .down-arrow i {
   transition: all 0.5s ease-in-out;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.scroller::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #c3073f;
+  border-radius: 10px;
 }
 
 .hide {
