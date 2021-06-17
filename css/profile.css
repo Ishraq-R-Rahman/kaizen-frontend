@@ -98,7 +98,7 @@
   display: inline-block;
   width: max-content;
   height: 100%;
-  padding: 8px 50px;
+  padding: 8px 40px;
   border-radius: 5px;
   box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
 }
@@ -273,6 +273,7 @@ input:focus:invalid {
 .card-profile .user-info .loan-contract-details .item {
   margin: 5px;
   text-align: center;
+  font-size: 0.8rem;
 }
 .card-profile .user-info .loan-contract-details .item:nth-of-type(1) {
   padding: 5px;
@@ -576,6 +577,10 @@ input:focus:invalid {
 .scroller::-webkit-scrollbar-thumb {
   background-color: #c3073f;
   border-radius: 10px;
+}
+
+.temp {
+  position: absolute;
 }
 
 .banner {
@@ -1324,9 +1329,8 @@ input:focus:invalid {
 }
 
 .site-stats {
-  margin: 80px;
+  margin: 100px 76px -10px 76px;
   font-family: "Dosis", sans-serif;
-  margin-top: 2rem;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -1346,7 +1350,7 @@ input:focus:invalid {
   width: 100%;
   margin-top: 2px;
   padding-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
@@ -1406,7 +1410,7 @@ input:focus:invalid {
   width: 100%;
   margin-top: 2px;
   padding-top: 20px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
@@ -1572,7 +1576,7 @@ input:focus:invalid {
   scrollbar-color: #c3073f white;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 25%;
+  grid-auto-columns: 28%;
   grid-template-columns: unset;
   grid-template-rows: unset;
   overflow-x: scroll;

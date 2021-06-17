@@ -948,10 +948,10 @@
 }
 
 .site-stats {
-    margin: 80px;
+    margin: 100px 76px -10px 76px;
     font-family: 'Dosis' , sans-serif;
         
-    margin-top: 2rem;
+    // margin-top: 2rem;
     padding: 20px;
 
     display: flex;
@@ -976,7 +976,7 @@
         width: 100%;
         margin-top: 2px;
         padding-top: 20px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -1051,7 +1051,7 @@
         width: 100%;
         margin-top: 2px;
         padding-top: 20px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -1266,7 +1266,7 @@
             scrollbar-color: $secondary-color white;
             display: grid;
             grid-auto-flow: column ;
-            grid-auto-columns: 25% ; // play with this to change height of the children, 50% will fill half
+            grid-auto-columns: 28% ; // play with this to change height of the children, 50% will fill half
             grid-template-columns: unset; // do not set template columns and rows
             grid-template-rows: unset;
             overflow-x: scroll;
