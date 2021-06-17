@@ -24,11 +24,24 @@
                 <p>Details about a user in 120 characters that will be taken from the sign up page. We will show it to them and the lender.</p>
                 <!-- Hidden details that will only be shown if the user goes to their own dashboard. Remove 'remove' from classlist & the list will show-->
                 <div class=""> 
-                    <div class="hidden-details">
+                    <div class="hidden-details remove">
                         <div class="item"><span class="field">NID Number</span><span class="value">0123456789</span></div>
                         <div class="item"><span class="field">Date Of Birth</span><span class="value">01/01/2021</span></div>
                         <div class="item"><span class="field">Email</span><span class="value">dummy@gmail.com</span></div>
                         <div class="item"><span class="field">Next Installment</span><span class="value">1200 BDT</span></div>
+                    </div>
+                    <div class="lender-views-receiver">
+                        <div class="item"><span class="field">Loan Requests</span><span class="value">12</span></div>
+                        <div class="item"><span class="field">Total Offers</span><span class="value">42</span></div>
+                        <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
+                        <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div>
+                    </div>
+                    <div class="receiver-views-lender remove">
+                        <div class="item"><span class="field">Maximum Loan</span><span class="value">1200</span></div>
+                        <div class="item"><span class="field">Total Contracts</span><span class="value">42</span></div>
+                        <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
+                        <div class="item"><span class="field">Total Amount</span><span class="value">12000</span></div>
+                        <!-- <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div> -->
                     </div>
                 </div>
             </div>
@@ -117,9 +130,8 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Buttons -->
-        <div class="buttons-list content-box remove">
+
+        <div class="buttons-list content-box">
     
             <div class="loan-buttons remove">
                 <!-- thses buttons will only show when the lender is viewing the receiver profile -->
@@ -127,9 +139,9 @@
                     <a href="#" class="btn-profile btn-dark">Offer Contract</a>
                 </div>
             </div>
-            <div class="no-loan-buttons remove">
+            <div class="no-loan-buttons">
                 <div class="buttons">
-                    <a href="#!" class="btn-profile btn-dark" onclick="popup()">Post A Request</a>
+                    <a href="#!" class="btn-profile btn-dark" onclick="popupLoanRequest()">Post A Request</a>
                 </div>
             </div>
             <div class="contract-buttons remove">
@@ -144,6 +156,25 @@
                 </div>
             </div>
         </div>
+
+        <div class="site-stats content-box remove">
+            <h1>Site Stats</h1>
+            <div class="stats-receiver remove">
+                <div class="item"><span class="field">Loan Requests</span><span class="value">12</span></div>
+                <div class="item"><span class="field">Total Offers</span><span class="value">42</span></div>
+                <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
+                <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div>
+            </div>
+            <div class="stats-lender">
+                <div class="item"><span class="field">Loan Requests</span><span class="value">12</span></div>
+                <div class="item"><span class="field">Total Offers</span><span class="value">42</span></div>
+                <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
+                <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div>
+            </div>
+        </div>
+    
+        <!-- Buttons -->
+        
 
         <!-- Show Current lenders section -->
         <div class="current-lenders-section content-box">
@@ -467,7 +498,7 @@
         </div>
 
         <!-- Currently Lending / Loan Offers -->
-        <div class="side-scroll-section content-box">
+        <div class="side-scroll-section content-box remove">
             <div class="currently-lending remove">
                 <h1>Currently Lending<i class="fas fa-flag-checkered remove" data-tooltip="Reached Your Limit For Lenders"></i></h1>
                 <div class="user-cards scroller">
@@ -1641,7 +1672,7 @@
 
             <!-- Buttons -->
             <div class="buttons inputs-div">
-                <a href="#!" class="btn-form btn-light" onclick="popup()">Cancel</a>
+                <a href="#!" class="btn-form btn-light" onclick="popupLoanRequest()">Cancel</a>
                 <a href="#" class="btn-form btn-dark">Post</a>
             </div>
         </div>
@@ -1650,11 +1681,34 @@
 </body>
 
 <script>
-    function popup() {
+    function popupLoanRequest() {
         let blur = document.getElementById("main");
         let request = document.getElementById("popup-request");
         blur.classList.toggle("background-blur");
         request.classList.toggle("remove");
+    }
+
+    function popupContractOffer() {
+        let blur = document.getElementById("main");
+        let request = document.getElementById("popup-contract");
+        blur.classList.toggle("background-blur");
+        request.classList.toggle("remove");
+    }
+
+    function lenderDashboard() {
+
+    }
+
+    function receiverDashboard() {
+
+    }
+    
+    function lenderViewsReceiver() {
+
+    }
+
+    function receiverViewsLender() {
+
     }
 </script>
 </html>
