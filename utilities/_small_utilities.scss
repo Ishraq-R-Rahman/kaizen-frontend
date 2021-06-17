@@ -597,7 +597,8 @@ input {
 
 .scroller {
     &::-webkit-scrollbar {
-        width: .4rem;   
+        width: .4rem; 
+        height: 0.4rem;  
     }
 
     &::-webkit-scrollbar-track {
