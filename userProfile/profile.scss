@@ -446,12 +446,12 @@
                     
                     display: flex;
                     justify-content: center;
-                    .total {
+                    .left {
                         .field {
                             color: $secondary-color;
                         }
                     }
-                    .collected {
+                    .total {
                         display: none;
                         
                     }
@@ -461,10 +461,10 @@
                         background-color: $secondary-color;
                         color: white;
                         border-radius: 10px 0 0 0;
-                        .total {
+                        .left {
                             display: none;
                         }
-                        .collected {
+                        .total {
                             display: inline-block;
                             
                             .value {
@@ -943,6 +943,145 @@
                     }
                 }
             }
+        }
+    }
+
+    .offer-info {
+        font-family: 'Dosis' , sans-serif;
+        
+        margin-top: 2rem;
+        padding: 20px;
+    
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        outline-width: 2px;
+        outline-style: dashed;
+        outline-color: $secondary-color;
+        outline-offset: 2px;
+        
+        
+        h1 {
+            font-family: 'Staatliches', cursive;
+            font-size: 2.6rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            i {
+                padding-left: 20px;
+                color: $secondary-color;
+                font-size: 2.4rem;
+                align-self: center;
+                // position: absolute;
+                left: auto;
+            }
+        }
+    
+        p {
+            
+            padding-left: 20px;
+            padding-bottom: 20px;
+            font-size: 1.4rem;
+            width: max-content;
+            display: inline-block;
+
+            &::before {
+                content: open-quote;
+            }
+    
+            &::after {
+                content: close-quote;
+            }
+    
+            &::before, &::after {
+                display: inline-block;
+                vertical-align: bottom;
+                color: $secondary-color;
+                font-size: 2rem;
+                top: 0.2rem;
+                position: relative;
+            }
+        }
+    
+        cite {
+            align-self: flex-end;
+            color: $secondary-color;
+    
+        }
+    
+        .contract-data {
+            width: 50%;
+            margin-top: 20px;
+            border-top: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+            padding-top: 10px;
+            flex-basis: 100%;
+            padding-left: 20px;
+            font-size: 1.4rem;
+    
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+    
+            .item {
+                margin: 10px;
+                text-align: center;
+                padding: 10px;
+
+                display: flex;
+                justify-content: center;
+                .offer-condition {
+                    .field {
+                        color: $secondary-color;
+                    }
+                }
+                
+                &:hover {
+                    background-color: $secondary-color;
+                    .field {
+                        color: white;
+                    }
+
+                    .value {
+                        color:  yellow;
+                    }
+                }
+    
+                &:nth-of-type(1) {
+                    border-bottom: 1px solid $light-color;
+                    border-right: 1px solid $light-color;
+                    
+                }
+                &:nth-of-type(2) {
+                    border-bottom: 1px solid $light-color;
+                    border-left: 1px solid $light-color;
+                }
+                &:nth-of-type(3) {
+                    border-top: 1px solid $light-color;
+                    border-right: 1px solid $light-color;
+                }
+                &:nth-of-type(4) {
+                    border-top: 1px solid $light-color;
+                    border-left: 1px solid $light-color;
+                }
+            }
+        }
+
+        .conditions {
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 20px;
+            & > * > * {
+                padding: 5px 0;
+            }
+            font-size: 1.1rem;
         }
     }
 }

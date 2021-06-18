@@ -947,10 +947,10 @@ input:focus:invalid {
   display: flex;
   justify-content: center;
 }
-.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .total .field {
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .left .field {
   color: #c3073f;
 }
-.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .collected {
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1) .total {
   display: none;
 }
 .loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover {
@@ -958,13 +958,13 @@ input:focus:invalid {
   color: white;
   border-radius: 10px 0 0 0;
 }
-.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .total {
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .left {
   display: none;
 }
-.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .collected {
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .total {
   display: inline-block;
 }
-.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .collected .value {
+.loan-contract-info .loan-info .loan-data .item:nth-of-type(1):hover .total .value {
   color: yellow;
 }
 .loan-contract-info .loan-info .loan-data .item:nth-of-type(2) {
@@ -1326,6 +1326,118 @@ input:focus:invalid {
 }
 .loan-contract-info .contract-info .contract-data .item:nth-of-type(4):hover .default .value {
   color: yellow;
+}
+.loan-contract-info .offer-info {
+  font-family: "Dosis", sans-serif;
+  margin-top: 2rem;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: #c3073f;
+  outline-offset: 2px;
+}
+.loan-contract-info .offer-info h1 {
+  font-family: "Staatliches", cursive;
+  font-size: 2.6rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.loan-contract-info .offer-info h1 i {
+  padding-left: 20px;
+  color: #c3073f;
+  font-size: 2.4rem;
+  align-self: center;
+  left: auto;
+}
+.loan-contract-info .offer-info p {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 1.4rem;
+  width: max-content;
+  display: inline-block;
+}
+.loan-contract-info .offer-info p::before {
+  content: open-quote;
+}
+.loan-contract-info .offer-info p::after {
+  content: close-quote;
+}
+.loan-contract-info .offer-info p::before, .loan-contract-info .offer-info p::after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #c3073f;
+  font-size: 2rem;
+  top: 0.2rem;
+  position: relative;
+}
+.loan-contract-info .offer-info cite {
+  align-self: flex-end;
+  color: #c3073f;
+}
+.loan-contract-info .offer-info .contract-data {
+  width: 50%;
+  margin-top: 20px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding-top: 10px;
+  flex-basis: 100%;
+  padding-left: 20px;
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.loan-contract-info .offer-info .contract-data .item {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.loan-contract-info .offer-info .contract-data .item .offer-condition .field {
+  color: #c3073f;
+}
+.loan-contract-info .offer-info .contract-data .item:hover {
+  background-color: #c3073f;
+}
+.loan-contract-info .offer-info .contract-data .item:hover .field {
+  color: white;
+}
+.loan-contract-info .offer-info .contract-data .item:hover .value {
+  color: yellow;
+}
+.loan-contract-info .offer-info .contract-data .item:nth-of-type(1) {
+  border-bottom: 1px solid #6f2232;
+  border-right: 1px solid #6f2232;
+}
+.loan-contract-info .offer-info .contract-data .item:nth-of-type(2) {
+  border-bottom: 1px solid #6f2232;
+  border-left: 1px solid #6f2232;
+}
+.loan-contract-info .offer-info .contract-data .item:nth-of-type(3) {
+  border-top: 1px solid #6f2232;
+  border-right: 1px solid #6f2232;
+}
+.loan-contract-info .offer-info .contract-data .item:nth-of-type(4) {
+  border-top: 1px solid #6f2232;
+  border-left: 1px solid #6f2232;
+}
+.loan-contract-info .offer-info .conditions {
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+.loan-contract-info .offer-info .conditions > * > * {
+  padding: 5px 0;
 }
 
 .site-stats {

@@ -11,24 +11,31 @@
     <title>User Profile</title>
 </head>
 <body>
+    <!-- This section will not be a part of the main page -->
     <div class="temp">
         <div class="buttons">
             <a href="#" class="btn btn-dark" onclick="lenderDashboard()">Lender dashboard</a>
         </div>
-        <div class="buttons" style="margin-left: 200px;">
+        <div class="buttons" style="margin-left: 200px;font-size: 0.7rem;">
             <a href="#" class="btn btn-dark" onclick="receiverDashboard(1)">Receiver dashboard-No Request-No Lender</a>
         </div>
-        <div class="buttons" style="margin-left: 560px; margin-top: -15px;">
+        <div class="buttons" style="margin-left: 560px; margin-top: -15px;font-size: 0.7rem;">
             <a href="#" class="btn btn-dark" onclick="receiverDashboard(2)">Receiver dashboard-No Request-Lender Left</a>
         </div>
-        <div class="buttons" style="margin-left: 950px; margin-top: -15px;">
+        <div class="buttons" style="margin-left: 950px;font-size: 0.7rem; margin-top: -15px;">
             <a href="#" class="btn btn-dark" onclick="receiverDashboard(3)">Receiver dashboard-Active Request</a>
         </div>
-        <div class="buttons" style="margin-top: 100px;margin-left: 450px;">
+        <div class="buttons" style="margin-top: 100px;font-size: 0.7rem;margin-left: 450px;">
             <a href="#" class="btn btn-dark" onclick="lenderViewsReceiver(1)">Lender Views Receiver dashboard-No Contract</a>
         </div>
-        <div class="buttons" style="margin-top: 0;margin-left: 850px;">
+        <div class="buttons" style="margin-top: 0;font-size: 0.7rem;margin-left: 850px;">
             <a href="#" class="btn btn-dark" onclick="lenderViewsReceiver(2)">Lender Views Receiver dashboard-Active Contract</a>
+        </div>
+        <div class="buttons" style="margin-top: 50px;font-size: 0.7rem;margin-left: 750px;">
+            <a href="#" class="btn btn-dark" onclick="receiverViewsLender(1)">Receiver views lender-no active contract</a>
+        </div>
+        <div class="buttons" style="margin-top: -20px;font-size: 0.7rem;margin-left: 450px;">
+            <a href="#" class="btn btn-dark" onclick="receiverViewsLender(2)">Receiver views lender-Active contract</a>
         </div>
     </div>
     <main class="" id = "main">
@@ -37,7 +44,7 @@
         <div class="user-info">
             <div class="profile-circle">   
             </div>
-            <p class="bkash remove" id="bkash" data-tooltip = "Bkash number for the receiver"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="-6.6741 -11.07275 57.8422 66.4365"><g fill="none"><path fill="#DF146E" d="M42.31 44.291H2.182C.981 44.291 0 43.308 0 42.107V2.186C0 .982.981 0 2.182 0H42.31c1.203 0 2.184.982 2.184 2.186v39.921c0 1.201-.981 2.184-2.184 2.184"/><path fill="#FFF" d="M31.894 24.251l-14.107-2.246 1.909 8.329zm.572-.682L21.374 8.16l-3.623 13.106zm-15.402-2.482L5.441 6.239l15.221 1.819zm-5.639-6.154l-6.449-6.08h1.695zm24.504 1.15L33.2 23.486l-4.426-6.118zM21.417 30.232l10.71-4.3.454-1.365zm-8.933 7.821l4.589-16.102 2.326 10.479zm24.099-21.914l-1.128 3.056 4.059-.07z"/></g></svg>12345678900</p>
+            <p class="bkash remove" id="bkash" data-tooltip = "Bkash number for the user"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="-6.6741 -11.07275 57.8422 66.4365"><g fill="none"><path fill="#DF146E" d="M42.31 44.291H2.182C.981 44.291 0 43.308 0 42.107V2.186C0 .982.981 0 2.182 0H42.31c1.203 0 2.184.982 2.184 2.186v39.921c0 1.201-.981 2.184-2.184 2.184"/><path fill="#FFF" d="M31.894 24.251l-14.107-2.246 1.909 8.329zm.572-.682L21.374 8.16l-3.623 13.106zm-15.402-2.482L5.441 6.239l15.221 1.819zm-5.639-6.154l-6.449-6.08h1.695zm24.504 1.15L33.2 23.486l-4.426-6.118zM21.417 30.232l10.71-4.3.454-1.365zm-8.933 7.821l4.589-16.102 2.326 10.479zm24.099-21.914l-1.128 3.056 4.059-.07z"/></g></svg>12345678900</p>
             <div class="description">
                 <!-- Will show the icon only when the user is verified -->
                 <h1>Dummy Username<i class="fas fa-check-square remove" data-tooltip="User is verified" id="verified"></i></h1>
@@ -62,7 +69,7 @@
                         <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
                         <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div>
                     </div>
-                    <div class="receiver-views-lender remove" id="receiver-views-lender ">
+                    <div class="receiver-views-lender remove" id="receiver-views-lender">
                         <div class="item"><span class="field">Maximum Loan</span><span class="value">1200</span></div>
                         <div class="item"><span class="field">Total Contracts</span><span class="value">42</span></div>
                         <div class="item"><span class="field">Defaults</span><span class="value">0</span></div>
@@ -80,16 +87,54 @@
                 <cite>- 01/01/2021 <br> </cite>
                 <div class="loan-data">
                     <div class="item">
+                        <div class="left">
+                            <span class="field">Left Amount:</span> <span class="value">1000 BDT</span>
+                        </div>
                         <div class="total">
                             <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
-                        </div>
-                        <div class="collected">
-                            <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
                         </div>
                     </div>
                     <div class="item">
                         <div class="next-installment">
                             <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                        </div>
+                        <div class="expiration">
+                            <span class="field">Expiration Date: </span> <span class="value">01/04/2021</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                         <div class="progress-values">
+                             <div class="centering">
+                                <span class="field">Progress: </span> <span class="value"> 55% </span>
+                             </div>
+                         </div>
+                    </div>
+                    <div class="item">
+                        <div class="current-lenders">
+                            <span class="field">Current Lenders:</span> <span class="value"> 5 </span>
+                        </div>
+                        <div class="total-request">
+                            <span class="field">Total Requests: </span> <span class="value">15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loan-info remove" id="loan-info-lender-view">
+                <h1>Loan Information</h1>
+                <p>I want loan because I need treatment. I want to live and I want to be healthy again. </p>
+                <cite>- 01/01/2021 <br> </cite>
+                <div class="loan-data">
+                    <div class="item">
+                        <div class="left">
+                            <span class="field">Left Amount:</span> <span class="value">1000 BDT</span>
+                        </div>
+                        <div class="total">
+                            <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="next-installment fixed-interest">
+                            <span class="field">Interest Rate:</span> <span class="value">5%</span>
                         </div>
                         <div class="expiration">
                             <span class="field">Expiration Date: </span> <span class="value">01/04/2021</span>
@@ -150,9 +195,44 @@
                             <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
                         </div>
                         <div class="default">
-                            <span class="field">Defaulted: </span> <span class="value">0 times</span>
+                            <span class="field">Defaulted Installments: </span> <span class="value">0 times</span>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="offer-info remove" id="offer-info">
+                <h1><div>Contract Offer</div><i class="far fa-laugh-beam"></i></i></h1>
+                
+                <p>Dummy Username has made an offer.</p>
+                <cite>- 01/01/2021 <br> </cite>
+                <div class="contract-data">
+                    <div class="item">
+                        <div class="offer-condition">
+                            <span class="field">Loan Amount:</span> <span class="value">1200 BDT</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="offer-condition">
+                            <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="offer-condition">
+                            <span class="field">Installments:</span> <span class="value">3</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="offer-condition">
+                            <span class="field">First Installment Date: </span> <span class="value">01/02/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conditions">
+                    <ul>
+                        <li>You have to finish payment by: <span class="highlight">01/01/2021</span></li>
+                        <li>Total amount with interest is: <span class="highlight">1200</span> BDT</li>
+                        <li class="collateral remove" id="collateral">Your collateral will be subjected to seizure in case of <span class="highlight">default.</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -171,7 +251,7 @@
                 </div>
             </div>
             <div class="contract-buttons remove" id="contract-buttons">
-                <div class="buttons">
+                <div class="buttons remove" id="end-contract-button">
                     <a href="#" class="btn-profile btn-dark">End Contract</a>
                 </div>
                 <div class="buttons">
@@ -180,6 +260,14 @@
                 <!-- <div class="buttons">
                     <a href="#" class="btn-profile btn-dark">Extend Contract</a>
                 </div> -->
+            </div>
+            <div class="contract-buttons remove" id="offer-buttons">
+                <div class="buttons">
+                    <a href="#" class="btn-profile btn-dark">Accept</a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn-profile btn-light">Decline</a>
+                </div>
             </div>
         </div>
 
@@ -771,10 +859,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -823,10 +911,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -875,10 +963,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -927,10 +1015,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -979,10 +1067,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -1031,10 +1119,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -1083,10 +1171,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -1135,10 +1223,10 @@
                         </div>
                         <div class="small-buttons-list">
                             <div class="buttons ">
-                                <a href="#" class="small-btn-profile btn-dark">End Contract</a>
+                                <a href="#" class="small-btn-profile btn-dark">Accept</a>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="small-btn-profile btn-light">Report Issue</a>
+                                <a href="#" class="small-btn-profile btn-light">Decline</a>
                             </div>
                             <!-- <div class="buttons ">
                                 <a href="#" class="small-btn-profile btn-dark">Extend Contract</a>
@@ -1539,12 +1627,12 @@
         let show ;
         if( val == 1 ){
             // this is if they have no active contract
-           show = [ 'description','lender-views-receiver','loan-contract-info','loan-info','buttons-list','loan-buttons' ,'current-lenders-section','report-issue-1','report-issue-2','side-scroll-section' , 'review-section'];
+           show = [ 'description','lender-views-receiver','loan-contract-info','loan-info-lender-view','buttons-list','loan-buttons' ,'current-lenders-section','report-issue-1','report-issue-2','side-scroll-section' , 'review-section'];
 
         }
         else if( val == 2 ){
             // this is if they have an active contract
-           show = ['bkash', 'description','lender-views-receiver','loan-contract-info','contract-info','buttons-list','contract-buttons','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' , 'review-section'];
+           show = ['bkash', 'description','lender-views-receiver','loan-contract-info','contract-info','buttons-list','contract-buttons','end-contract-button','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' , 'review-section'];
         }
         
 
@@ -1554,8 +1642,21 @@
         }
     }
 
-    function receiverViewsLender() {
+    function receiverViewsLender(val) {
+        let show;
+        if( val == 1 ){
+            // receiver seeing lender after an offer has been made
+            show = ['description' , 'receiver-views-lender' ,'loan-contract-info', 'offer-info', 'buttons-list','offer-buttons']
+        }
+        else if ( val == 2 ){
+            // receiver seeing lender after they agreed on a contract
+            show = ['bkash', 'description' , 'receiver-views-lender' , 'loan-contract-info', 'contract-info', 'buttons-list','contract-buttons' ]
+        }
 
+        for( i = 0 ; i < show.length ; i++ ){
+            let elem = document.getElementById(show[i]);
+            elem.classList.toggle("remove");
+        }
     }
 </script>
 </html>
