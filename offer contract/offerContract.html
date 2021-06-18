@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbafa5c523.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/offerContract.css">
+    <title>Post A Request Pop Up Card</title>
+</head>
+<body>
+    <div class="buttons temp-button">
+        <div class="btn-card btn-dark" onclick="myFunction()">Make An Offer</div>
+    </div>
+    <div class="contract-offer-card content-box remove" id="popup-contract">
+        <div class="title-card">
+            <h1>Contract Offer</h1>
+        </div>
+        <div class="contract-form">
+            <!-- Amount -->
+            <div class="small-input-field inputs-div">
+                <aside>
+                    <h3>Loan Amount</h3>
+                    <p>Between (1000 - 10000 bdt)</p>
+                </aside>
+                <div class="input-field">
+                    <input type="number" class="small-input" max="10000" min="1000" required>
+                    <span> BDT</span>
+                </div>   
+            </div>
+            <div class="small-input-field inputs-div">
+                <aside>
+                    <h3>Interest Rate</h3>
+                    <p>Between <span class="interest-min">5%</span> to <span class="interest-max">10%</soan></p>
+                </aside>
+                <div class="input-field">
+                    <input type="number" class="small-input" max="10" min="5" required>
+                    <span> %</span>
+                </div>
+            </div>
+
+            <div class="inputs-div">
+                <aside>
+                    <h3>Installments</h3>
+                </aside>
+                <div class="radio-field">
+                    <input type="radio" id="one" name="option" value="1">
+                    <label for="one">1</label>
+                    <input type="radio" id="two" name="option" value="2">
+                    <label for="two">2</label>
+                    <input type="radio" id="three" name="option" value="3">
+                    <label for="three">3</label>
+                  </div>
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="buttons inputs-div">
+                <a href="#" class="btn-form btn-light">Cancel</a>
+                <a href="#" class="btn-form btn-dark">Post</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        let popup = document.getElementById("popup-contract");
+        popup.classList.toggle("remove");
+    }
+</script>
+</html>

@@ -1405,7 +1405,7 @@
             scrollbar-color: $secondary-color white;
             display: grid;
             grid-auto-flow: column ;
-            grid-auto-columns: 28% ; // play with this to change height of the children, 50% will fill half
+            grid-auto-columns: 33% ; // play with this to change height of the children, 50% will fill half
             grid-template-columns: unset; // do not set template columns and rows
             grid-template-rows: unset;
             overflow-x: scroll;
@@ -1618,6 +1618,129 @@
                 & > *::-webkit-outer-spin-button {
                     -webkit-appearance: none;
                     margin: 0;
+                }
+            }
+        }
+
+        &:hover {
+            & > * > aside > p {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.contract-offer-card {
+    background-color: white;
+    position: fixed;
+    top: 5%;
+    left: 32%;
+
+    width: 615px;
+    height: max-content;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px  rgba(0,0,0,0.5), -1px -1px 15px 2px  rgba(0,0,0,0.5);
+
+    padding-top: 20px;
+
+    .contract-form {
+        font-family: 'Dosis',sans-serif;
+        font-size: 1.6rem;
+
+        & > * {
+            & > aside > p {  
+                visibility: hidden ;
+                font-size: 1rem;
+                color: rgb(144, 142, 142);
+            }
+
+            & > .input-field {
+                padding-bottom: 10px;
+                position: relative;
+
+                display: flex;
+                justify-content: flex-start;
+                text-align: center;
+
+                span {
+                    // position: absolute;
+                    top: -1px;
+                    // align-self: flex-end;
+                    left: 42px;
+                }
+
+                & > *::-webkit-inner-spin-button,
+                & > *::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            & > .radio-field {
+                flex-grow: 1;
+                align-self: flex-end;
+                display: flex;
+                gap: 2rem;
+                // padding-bottom: 50px;
+
+                @-moz-document url-prefix() {
+                    & > input {
+                        visibility: visible !important;
+                    }  
+                }
+
+                @media screen and (-webkit-min-device-pixel-ratio:0){
+                    & > input {
+                        visibility: hidden;
+                    } 
+                }
+
+                // @media screen and (-webkit-min-device-pixel-ratio:0)
+                // and (min-resolution:.001dpcm) {
+                    
+                //     & > input {
+                //         visibility: hidden;
+                //     }
+                // }
+
+                
+                & > input::after {
+                    margin-top: 5px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    top: -2px;
+                    left: -1px;
+                    position: relative;
+                    background-color: white;
+                    content: '';
+                    display: inline-block;
+                    visibility: visible;
+                    border: 5px solid lightgray;
+                }
+                
+                & > input:checked::after {
+                    margin-top: 5px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 15px;
+                    top: -2px;
+                    left: -1px;
+                    position: relative;
+                    background-color: white;
+                    content: '';
+                    display: inline-block;
+                    visibility: visible;
+                    border: 5px solid $secondary-color;
+                }
+
+                
+
+                & > input:checked + label {
+                    color: $secondary-color;
+                    font-weight: bold;
+                    font-size: 1.8rem;
                 }
             }
         }
