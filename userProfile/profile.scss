@@ -1519,7 +1519,7 @@
         h1 {
             // width: 100%;
             font-family: 'Staatliches', cursive;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             // padding-bottom: 10px;
         }
 
@@ -1649,6 +1649,7 @@
         font-size: 1.6rem;
 
         & > * {
+            gap: 1rem;
             & > aside > p {  
                 visibility: hidden ;
                 font-size: 1rem;

@@ -1773,7 +1773,7 @@ input:focus:invalid {
 }
 .review-section .title h1 {
   font-family: "Staatliches", cursive;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
 }
 .review-section .title p {
   font-size: 2rem;
@@ -1871,6 +1871,9 @@ input:focus:invalid {
 .contract-offer-card .contract-form {
   font-family: "Dosis", sans-serif;
   font-size: 1.6rem;
+}
+.contract-offer-card .contract-form > * {
+  gap: 1rem;
 }
 .contract-offer-card .contract-form > * > aside > p {
   visibility: hidden;
