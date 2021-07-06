@@ -617,3 +617,39 @@ input {
 .temp {
     position: absolute;
 }
+
+.special-item {
+    padding: 10px;
+    border-top: 1px solid $light-color;
+    border-right: 1px solid $light-color;
+
+    display: flex;
+    justify-content: center;
+    .next-installment {
+        .field {
+            color: $secondary-color;
+        }
+    }
+    .amount {
+        display: none;
+        
+    }
+
+
+    &:hover {
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 0 0 0 10px;
+        .next-installment {
+            display: none;
+        }
+        .amount {
+            display: inline-block;
+            
+            .value {
+                color:  yellow;
+            }
+        }
+
+    }
+}

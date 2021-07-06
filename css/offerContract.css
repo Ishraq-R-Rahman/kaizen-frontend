@@ -570,6 +570,34 @@ input:focus:invalid {
   position: absolute;
 }
 
+.special-item {
+  padding: 10px;
+  border-top: 1px solid #6f2232;
+  border-right: 1px solid #6f2232;
+  display: flex;
+  justify-content: center;
+}
+.special-item .next-installment .field {
+  color: #c3073f;
+}
+.special-item .amount {
+  display: none;
+}
+.special-item:hover {
+  background-color: #c3073f;
+  color: white;
+  border-radius: 0 0 0 10px;
+}
+.special-item:hover .next-installment {
+  display: none;
+}
+.special-item:hover .amount {
+  display: inline-block;
+}
+.special-item:hover .amount .value {
+  color: yellow;
+}
+
 .hide {
   visibility: hidden !important;
 }

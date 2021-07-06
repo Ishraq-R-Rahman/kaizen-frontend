@@ -25,6 +25,7 @@
     font-family: 'Dosis',sans-serif;
     display: flex;
     margin-top: 10px;
+    padding-bottom: 50px;
     
     .profile-circle {
         position: relative;
@@ -1259,6 +1260,94 @@
         }
 
         
+    }
+}
+
+.upcoming-installment {
+    position: absolute;
+    width: 15rem;
+    top: 16rem;
+    right: 1rem;
+
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif;
+
+    border: 3px dashed $light-color;
+
+    padding: 10px;
+    & > h3 {
+        text-align: center;
+        padding-bottom: 5px;
+        border-bottom: 2px dotted $dark-color;
+    }
+
+    & > .installments {
+        padding-top: 10px;
+        overflow-y: scroll;
+        scrollbar-color: $secondary-color white;
+        height: 190px;
+
+        .installment-item {
+            display: flex;
+            border: 1px solid rgb(128, 128, 128);
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+
+            border-radius: 10px;
+            background: white;
+            // box-shadow: 0px 0px 46px -13px #333333;
+
+
+
+            .fields {
+                flex-grow: 1;
+                border-right: 1px solid lightgray;
+                
+                .hidden-field {
+                    display: none;
+                }
+            }
+
+            .values {
+                flex-grow: 1;
+                color: $secondary-color;
+                
+                .hidden-field {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background: $secondary-color;                
+
+                color: white;
+
+                .fields {
+                    .field {
+                        display: none;
+                    }
+                    .hidden-field {
+                        display: inline-block;
+                    }
+                }
+
+                .values {
+                    flex-grow: 1;
+                    color: $secondary-color;
+                    .field {
+                        display: none;
+                    }
+                    .hidden-field {
+                        display: inline-block;
+                        color: yellow;
+                    }
+                }
+            }
+        }
     }
 }
 
