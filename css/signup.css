@@ -665,6 +665,7 @@ a {
   font-family: "Staatliches", cursive;
   font-size: 2.5rem;
   padding-bottom: 15px;
+  color: #c3073f;
 }
 
 .social-container {
@@ -685,9 +686,13 @@ a {
 .form-container input {
   background: #eee;
   border: none;
-  padding: 12px 15px;
+  padding: 10px 15px;
   margin: 8px 0;
   width: 100%;
+}
+
+.form-container input::placeholder {
+  font-size: 1rem;
 }
 
 button {
@@ -720,7 +725,6 @@ button.ghost {
 
 button.ghost:hover {
   background: white;
-  border-color: black;
   color: #333;
 }
 

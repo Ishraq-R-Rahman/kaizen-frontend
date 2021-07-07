@@ -63,6 +63,7 @@ a{
         font-family: 'Staatliches',cursive;
         font-size: 2.5rem;
         padding-bottom: 15px;
+        color: $secondary-color;
     }
 }
 .social-container{
@@ -81,10 +82,14 @@ a{
 .form-container input{
     background: #eee;
     border: none;
-    padding: 12px 15px;
+    padding: 10px 15px;
     margin: 8px 0;
     width: 100%;
 }
+.form-container input::placeholder{
+    font-size: 1rem;
+}
+
 button{
     border-radius: 20px;
     border: 1px solid #f3f3f3;
@@ -111,7 +116,7 @@ button.ghost{
 }
 button.ghost:hover{
     background: white;
-    border-color: black;
+    // border-color: black;
     color: #333;
 }
 .si{
