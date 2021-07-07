@@ -682,6 +682,7 @@ input:focus:invalid {
 .user-info .description {
   padding-left: 40px;
   padding-top: 20px;
+  width: 50%;
 }
 .user-info .description h1 {
   font-family: "Staatliches", cursive;
