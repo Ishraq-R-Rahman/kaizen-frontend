@@ -1,0 +1,48 @@
+@import '../utilities/initial';
+@import '../utilities/variables';
+@import '../utilities/buttons';
+@import '../utilities/small_utilities';
+
+.main {
+    font-family: 'Staatliches' , cursive ;
+}
+
+.icon {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed $secondary-color;
+    margin-bottom: 40px;
+
+    color: #333;
+}
+
+.registration {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+.form {
+    padding-top: 10vh;
+    font-family: 'Dosis',sans-serif;
+    font-size: 1.8rem;
+
+
+    .video {
+        margin: 5rem 0;
+        outline-offset: 5px;
+        outline-width: 4px;
+        outline-style: dashed;
+        outline-color: $secondary-color;
+        
+        & > * {
+            cursor: pointer;
+            width: 100%;
+            height: 480;
+        }
+    }
+}

@@ -621,56 +621,15 @@ input:focus:invalid {
   font-family: "Dosis", sans-serif;
   font-size: 1.8rem;
 }
-.form .full-name > * > h3 {
-  width: 160%;
+.form .video {
+  margin: 5rem 0;
+  outline-offset: 5px;
+  outline-width: 4px;
+  outline-style: dashed;
+  outline-color: #c3073f;
 }
-.form .full-name > * > p {
-  visibility: hidden;
-  font-size: 0.8rem;
-  opacity: 0.5;
-}
-.form .full-name:hover > * > p {
-  visibility: visible;
-}
-.form .full-name > * > h3::after {
-  content: "*";
-  color: red;
-}
-.form .full-name .name-input {
-  width: 80%;
-  margin-left: 100px;
-  padding: 10px 20px;
-}
-.form .account-type {
-  padding-bottom: 120px;
-}
-.form .account-type > * > h3 {
-  padding-bottom: 12px;
-}
-.form .account-type > * > h3::after {
-  content: "*";
-  color: red;
-}
-.form .account-type .custom-select {
-  width: 50%;
-}
-.form .account-type .custom-select select {
-  font-size: 1.4rem;
-  width: 50%;
-  padding: 10px 10px;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-}
-.form .account-type .custom-select select:focus {
-  background: #c3073f;
-  color: white;
-}
-.form .account-type .custom-select select option {
-  background: white;
-  color: #1a1a1d;
-}
-.form .account-type .custom-select select option:hover {
-  background: #950740;
-  color: white;
+.form .video > * {
+  cursor: pointer;
+  width: 100%;
+  height: 480;
 }/*# sourceMappingURL=collateral.css.map */
