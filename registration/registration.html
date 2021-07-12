@@ -70,11 +70,12 @@
           </div>
           <div class="small-input-field inputs-div">
             <aside>
-              <h3>Collateral URL.</h3>
+              <h3>Profile Image</h3>
               <!-- <p>Example: Fazle Rafsani</p> -->
             </aside>
             <div class="input-field">
-              <input type="text" class="small-input" pattern="((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?" placeholder="Url for the youtube link" required>
+              <input type="file" class="small-input" accept="image/*" name="image" id="file"  onchange="loadFile(event)" >
+              <img src="#" id="output" alt="your image" srcset="" >
             </div>
           </div>
           <div class="account-type inputs-div">
@@ -100,4 +101,10 @@
       </div>
     </div>
 </body>
+<script>
+  var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
 </html>
