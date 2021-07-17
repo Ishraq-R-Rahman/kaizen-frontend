@@ -74,11 +74,37 @@
   }
 }
 
+.btn-transparent {
+  background: transparent;
+  color: $secondary-color;
+  border: 3px solid $secondary-color;
+
+  transition: all 0.2s ease-in-out;
+  
+
+  &:hover {
+    background: $secondary-color;
+    color: white;
+  }
+}
+
 .btn-profile {
   display: inline-block;
   width: max-content;
   height: 100%;
   padding: 10px 60px;
+  border-radius: 10px;
+  box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
+}
+
+.btn-collateral {
+  display: inline-block;
+  width: max-content;
+  height: 50px;
+  margin-top: 20px;
+  left: 40%;
+  position: relative;
+  padding: 10px 20px;
   border-radius: 10px;
   box-shadow: -4px -1px 12px -8px #000000, 4px 1px 12px -8px #000000;
 }

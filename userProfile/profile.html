@@ -77,8 +77,14 @@
                         <!-- <div class="item"><span class="field">Review</span><span class="value"><i class="fas fa-star" data-tooltip="Current-Rating" style="color: yellow; padding-right: 5px;"></i>4.5/5</span></div> -->
                     </div>
                 </div>
+            <!-- Collateral Button -->
+                <div class="collateral buttons remove" id="collateral">
+                    <a href="../collateral/collateral.html" class="btn-collateral btn-transparent">View Collateral</a>
+                </div>
             </div>
         </div>
+
+        
 
         <!-- New Section -->
         <div class="upcoming-installment remove">
@@ -1591,16 +1597,16 @@
         let show;
         if( val == 1 ){
             // this is if receiver has no active loan request - no lenders for previous loan request
-            show = ['bkash' , 'description', 'hidden-details-no-request','loan-contract-info', 'no-loan-info','buttons-list','no-loan-buttons','site-stats','stats-receiver','review-section','hide-contract','loan-request-popup'];
+            show = ['bkash' , 'description', 'hidden-details-no-request','collateral','loan-contract-info', 'no-loan-info','buttons-list','no-loan-buttons','site-stats','stats-receiver','review-section','hide-contract','loan-request-popup'];
         }
         else if ( val == 2 ){
             // this is if receiver has no active loan request - some lenders for previous loan request
-            show = ['bkash' , 'description', 'hidden-details-no-request','loan-contract-info', 'no-loan-info','site-stats','stats-receiver','current-lenders-section','review-section','hide-contract']; 
+            show = ['bkash' , 'description', 'hidden-details-no-request','collateral','loan-contract-info', 'no-loan-info','site-stats','stats-receiver','current-lenders-section','review-section','hide-contract']; 
         }
         
         else if ( val == 3 ) {
             // this is if receiver has an active request
-            show = ['bkash' , 'description', 'hidden-details','loan-contract-info', 'loan-info','side-scroll-section' ,'site-stats','stats-receiver', 'loan-offers','review-section','hide-contract'];
+            show = ['bkash' , 'description', 'hidden-details','collateral','loan-contract-info', 'loan-info','side-scroll-section' ,'site-stats','stats-receiver', 'loan-offers','review-section','hide-contract'];
         }
 
 
@@ -1614,12 +1620,12 @@
         let show ;
         if( val == 1 ){
             // this is if they have no active contract
-           show = [ 'description','lender-views-receiver','loan-contract-info','loan-info-lender-view','buttons-list','loan-buttons' ,'current-lenders-section','report-issue-1','report-issue-2','side-scroll-section' , 'review-section'];
+           show = [ 'description','lender-views-receiver','collateral','loan-contract-info','loan-info-lender-view','buttons-list','loan-buttons' ,'current-lenders-section','report-issue-1','report-issue-2','side-scroll-section' , 'review-section'];
 
         }
         else if( val == 2 ){
             // this is if they have an active contract
-           show = ['bkash', 'description','lender-views-receiver','loan-contract-info','contract-info','buttons-list','contract-buttons','end-contract-button','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' , 'review-section','post-review-popup'];
+           show = ['bkash', 'description','lender-views-receiver','collateral','loan-contract-info','contract-info','buttons-list','contract-buttons','end-contract-button','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' , 'review-section','post-review-popup'];
         }
         
 
