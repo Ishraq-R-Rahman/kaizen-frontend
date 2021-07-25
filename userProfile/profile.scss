@@ -1448,6 +1448,74 @@
       gap: 2rem;
     }
   }
+  .offered-lending {
+    font-family: 'Dosis', sans-serif;
+    // height: max-content;
+
+    margin-top: 2rem;
+    padding: 20px;
+
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+
+    outline-width: 2px;
+    outline-style: dashed;
+    outline-color: $secondary-color;
+    outline-offset: 2px;
+
+    h1 {
+      width: 100%;
+      font-family: 'Staatliches', cursive;
+      font-size: 2.6rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid lightgray;
+
+      i {
+        padding-left: 20px;
+        position: absolute;
+
+        &::after {
+          font-family: 'Dosis', cursive;
+          // font-style: italic;
+          content: attr(data-tooltip);
+          position: absolute;
+          left: 4rem;
+          top: -1.6rem;
+          font-size: 0.8rem;
+          background: white;
+          border: 1px solid $secondary-color;
+          border-radius: 10px;
+          text-align: center;
+          padding: 10px 0;
+          width: 140px;
+          height: max-content;
+          opacity: 0;
+          color: $secondary-color;
+        }
+
+        &:hover::after,
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    .user-cards {
+      padding: 20px;
+      flex-basis: 100%;
+      height: max-content;
+      border: 0.5px dotted $light-color;
+      scrollbar-color: $secondary-color white;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 33%; // play with this to change height of the children, 50% will fill half
+      grid-template-columns: unset; // do not set template columns and rows
+      grid-template-rows: unset;
+      overflow-x: scroll;
+      gap: 2rem;
+    }
+  }
   .loan-offers {
     font-family: 'Dosis', sans-serif;
     // height: max-content;
