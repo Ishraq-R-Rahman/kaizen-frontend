@@ -746,3 +746,20 @@ input {
         }
     }
 }
+
+
+.repay-loan-details {
+    border-top: 1px solid lightgray;
+
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-style: italic;
+    color: rgb(78, 78, 78);
+    padding-bottom: 20px;
+
+    .value {
+        color: $secondary-color;
+    }
+
+}

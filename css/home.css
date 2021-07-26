@@ -694,6 +694,19 @@ input:focus:invalid {
   align-self: center;
 }
 
+.repay-loan-details {
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-style: italic;
+  color: #4e4e4e;
+  padding-bottom: 20px;
+}
+.repay-loan-details .value {
+  color: #c3073f;
+}
+
 .banner {
   width: 100vw;
   height: 60vh;

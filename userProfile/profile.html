@@ -323,6 +323,9 @@
                 <div class="buttons remove" id="end-contract-button">
                     <a href="#!" class="btn-profile btn-dark"  onclick="popupReview()">End Contract</a>
                 </div>
+                <div class="buttons remove" id="repay-loan-button">
+                    <a href="#!" class="btn-profile btn-dark"  onclick="popupRepayLoan()">Repay Loan</a>
+                </div>
                 <div class="buttons">
                     <a href="#" class="btn-profile btn-light">Report Issue</a>
                 </div>
@@ -1912,6 +1915,52 @@
         </div>
     </div>
 
+    <!-- Repay Loan Popup here -->
+    <div class="contract-offer-card content-box remove" id="popup-repay-loan">
+        <div class="title-card">
+            <h1>Pay Back The Loan</h1>
+        </div>
+        <div class="contract-form">
+            <!-- <div class="small-input-field inputs-div">
+                <aside>
+                    <h3>Interest Rate</h3>
+                    <p>Between <span class="interest-min">5%</span> to <span class="interest-max">8%</soan></p>
+                </aside>
+                <div class="input-field">
+                    <input type="number" class="small-input" max="8" min="5" required>
+                    <span> %</span>
+                </div>
+            </div> -->
+
+            <div class="inputs-div">
+                <aside>
+                    <h3>Installments</h3>
+                </aside>
+                <div class="radio-field">
+                    <input type="radio" id="one" name="option" value="1" checked>
+                    <label for="one">1</label>
+                    <input type="radio" id="two" name="option" value="2">
+                    <label for="two">2</label>
+                    <input type="radio" id="three" name="option" value="3">
+                    <label for="three">3</label>
+                  </div>
+            </div>
+
+            <div class="repay-loan-details">
+                <div class="amount">Repay Loan Amount : <span class="value">1200</span> BDT</div>
+                <div class="date">Next Installment Date : <span class="value">01/01/2021</span></div>
+                <div class="next-amount">Next Installment Amount : <span class="value">1200</span> BDT</div>
+                <div class="amount">Total Amount Left : <span class="value">1200</span> BDT</div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons inputs-div">
+                <a href="#!" class="btn-form btn-light" onclick="popupRepayLoan()">Cancel</a>
+                <a href="#" class="btn-form btn-dark">Repay Loan</a>
+            </div>
+        </div>
+    </div>
+
 
     <div class="post-review-popup remove" id="post-review-popup">
         <div class="post-review-card content-box remove" id="popup-review">
@@ -1994,6 +2043,13 @@
         review.classList.toggle("remove");
     }
 
+    function popupRepayLoan() {
+        let blur = document.getElementById("main");
+        let loan = document.getElementById("popup-repay-loan");
+        blur.classList.toggle("background-blur");
+        loan.classList.toggle("remove");
+    }
+
     function popupContractOffer() {
         let blur = document.getElementById("main");
         let request = document.getElementById("popup-contract");
@@ -2060,7 +2116,7 @@
         }
         else if ( val == 2 ){
             // receiver seeing lender after they agreed on a contract
-            show = ['bkash', 'description' , 'receiver-views-lender' , 'loan-contract-info', 'contract-info','side-scroll-section' ,'transaction-history', 'buttons-list','contract-buttons' ]
+            show = ['bkash', 'description' , 'receiver-views-lender' , 'loan-contract-info', 'contract-info','side-scroll-section' ,'transaction-history', 'buttons-list','contract-buttons' , 'repay-loan-button' ]
         }
 
         for( i = 0 ; i < show.length ; i++ ){
