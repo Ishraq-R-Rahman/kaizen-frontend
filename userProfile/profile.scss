@@ -1584,6 +1584,46 @@
       gap: 2rem;
     }
   }
+  .transaction-history {
+    font-family: 'Dosis', sans-serif;
+    // height: max-content;
+
+    margin-top: 2rem;
+    padding: 20px;
+
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+
+    outline-width: 2px;
+    outline-style: dashed;
+    outline-color: $secondary-color;
+    outline-offset: 2px;
+
+    h1 {
+      width: 100%;
+      font-family: 'Staatliches', cursive;
+      font-size: 2.6rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid lightgray;
+      font-weight: bold;
+    }
+
+    .user-cards {
+      padding: 20px;
+      flex-basis: 100%;
+      height: max-content;
+      border: 0.5px dotted $light-color;
+      scrollbar-color: $secondary-color white;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 25%; // play with this to change height of the children, 50% will fill half
+      grid-template-columns: unset; // do not set template columns and rows
+      grid-template-rows: unset;
+      overflow-x: scroll;
+      gap: 2rem;
+    }
+  }
 }
 
 .review-section {
