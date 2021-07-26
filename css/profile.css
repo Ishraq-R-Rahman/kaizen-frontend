@@ -637,6 +637,7 @@ input:focus:invalid {
 .transaction-card {
   font-size: 1rem;
   width: max-content;
+  height: max-content;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2), -5px -5px 15px 5px rgba(0, 0, 0, 0.2);
