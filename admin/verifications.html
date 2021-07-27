@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbafa5c523.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/verifications.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main content-box">
+      <div class="header">
+        <div class="icon">
+            <i class="fab fa-kickstarter-k fa-6x"></i>
+          </div>
+          <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+            
+            <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+              <a href="#"><li>Reports</li></a>
+              <a href="#"><li>Verifications</li></a>
+            </ul>
+          </div>
+      </div>
+      <div class="registration">
+        <div class="title-card">
+          <h1>Verify Users</h1>
+          <p>Here is a compilation of the users who have provided collateral. Verify the users whose collateral you see fit. </p>
+        </div>
+        <div class="transaction-history" >
+            <h1>
+                <div class="header-contract">User ID  <span class="value">#60a2288f788f921b543cd808</span></div>
+                <div class="lender remove">Lender</div>
+                <div class="receiver">Receiver</div>
+            </h1>
+
+            <div class="report-details">
+                <div class="issuer-name">
+                    Full Name : <span class="value">Fahim Shahriar </span>
+                </div>
+                <div class="issuer-name">
+                    Email : <span class="value">anik65@gmail.com</span>
+                </div>
+                <div class="description">
+                    Details: <span class="value">I am Anik. </span>
+                </div>
+                <div class="issue-date">Bkash <span class="value">01961229150</span></div>
+            </div>
+
+            <div class="hide-transaction">
+                <div class="down-arrow">
+                    <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                
+                <div class="video">
+                    <iframe
+                        src="https://www.youtube.com/embed/CggXSu_P2GQ">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="buttons admin-buttons">
+                <a href="#" class="btn-profile btn-transparent">Verify User</a>
+                <a href="#" class="btn-profile btn-transparent">Remove Collateral</a>
+                <!-- <a href="#" class="btn-profile btn-transparent">Ignore Issue</a> -->
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
