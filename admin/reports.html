@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbafa5c523.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reports.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main content-box">
+      <div class="header">
+        <div class="icon">
+            <i class="fab fa-kickstarter-k fa-6x"></i>
+          </div>
+          <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+            
+            <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+              <a href="#"><li>Reports</li></a>
+              <a href="#"><li>Verifications</li></a>
+            </ul>
+          </div>
+      </div>
+      <div class="registration">
+        <div class="title-card">
+          <h1>Reported Grievances</h1>
+          <p>Here is a compilation of the users grievances. The grievances are sorted by time. </p>
+        </div>
+        <div class="transaction-history" >
+            <h1>
+                <div class="header-contract">Contract ID  <span class="value">#60a2288f788f921b543cd808</span></div>
+            </h1>
+
+            <div class="report-details">
+                <div class="issuer-name">
+                    Full Name : <span class="value">Fahim Shahriar</span>
+                </div>
+                <div class="description">
+                    Description: <span class="value">I have paid the lent amount back to the lender but he won't end my contract. </span>
+                </div>
+                <div class="issue-date">Issued Date: <span class="value">01/01/2021</span></div>
+            </div>
+
+            <div class="contract-details">
+                
+                    <div class="contract-data">
+                        <div class="item">
+                            <div class="total">
+                                <span class="field">Total Amount:</span> <span class="value">1200 BDT</span>
+                            </div>
+                            <div class="collected">
+                                <span class="field">Collected Amount:</span> <span class="value">1000 BDT</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="next-installment">
+                                <span class="field">Next Installment:</span> <span class="value">01/02/2021</span>
+                            </div>
+                            <div class="amount">
+                                <span class="field">Installment Amount: </span> <span class="value">200 BDT</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                             <div class="installment-values">
+                                 <div class="centering">
+                                    <span class="field">Installments Completed: </span> <span class="value"> 2 </span>
+                                 </div>
+                             </div>
+                        </div>
+                        <div class="item">
+                            <div class="interest-rate">
+                                <span class="field">Interest Rate:</span> <span class="value"> 5% </span>
+                            </div>
+                            <div class="default">
+                                <span class="field">Defaulted Installments: </span> <span class="value">0 times</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="hide-transaction">
+                <div class="down-arrow">
+                    <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                
+                <div class="user-cards scroller">
+                    <div class="transaction-card">
+                        <h2>Transaction Statement #<span class="statement"> 1</span></h2>
+                        <div class="details">
+                            <div class="type">Lender Paid Receiver</div>
+                            <div class="issue-date">01/01/2021</div>
+                            <div class="bkash"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="20" viewBox="-6.6741 -11.07275 57.8422 66.4365"><g fill="none"><path fill="#DF146E" d="M42.31 44.291H2.182C.981 44.291 0 43.308 0 42.107V2.186C0 .982.981 0 2.182 0H42.31c1.203 0 2.184.982 2.184 2.186v39.921c0 1.201-.981 2.184-2.184 2.184"/><path fill="#FFF" d="M31.894 24.251l-14.107-2.246 1.909 8.329zm.572-.682L21.374 8.16l-3.623 13.106zm-15.402-2.482L5.441 6.239l15.221 1.819zm-5.639-6.154l-6.449-6.08h1.695zm24.504 1.15L33.2 23.486l-4.426-6.118zM21.417 30.232l10.71-4.3.454-1.365zm-8.933 7.821l4.589-16.102 2.326 10.479zm24.099-21.914l-1.128 3.056 4.059-.07z"/></g></svg><div class="number">01961229150</div></div>
+                            <div class="transaction-id">Transaction Id: C60a2288f788f921b543cd813</div>
+                            <div class="amount">Amount : 2130 BDT</div>
+                        </div>
+                    </div>
+                    <div class="transaction-card">
+                        <h2>Transaction Statement #<span class="statement"> 1</span></h2>
+                        <div class="details">
+                            <div class="type">Receiver Paid Lender</div>
+                            <div class="issue-date">01/01/2021</div>
+                            <div class="bkash"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="20" viewBox="-6.6741 -11.07275 57.8422 66.4365"><g fill="none"><path fill="#DF146E" d="M42.31 44.291H2.182C.981 44.291 0 43.308 0 42.107V2.186C0 .982.981 0 2.182 0H42.31c1.203 0 2.184.982 2.184 2.186v39.921c0 1.201-.981 2.184-2.184 2.184"/><path fill="#FFF" d="M31.894 24.251l-14.107-2.246 1.909 8.329zm.572-.682L21.374 8.16l-3.623 13.106zm-15.402-2.482L5.441 6.239l15.221 1.819zm-5.639-6.154l-6.449-6.08h1.695zm24.504 1.15L33.2 23.486l-4.426-6.118zM21.417 30.232l10.71-4.3.454-1.365zm-8.933 7.821l4.589-16.102 2.326 10.479zm24.099-21.914l-1.128 3.056 4.059-.07z"/></g></svg><div class="number">01961229150</div></div>
+                            <div class="installment">Installment: <span class="value">1</span></div>
+                            <div class="transaction-id">Transaction Id: C60a2288f788f921b543cd813</div>
+                            <div class="amount">Amount : 2130 BDT</div>
+                        </div>
+                    </div>
+                    
+                    <div class="transaction-card">
+                        <h2>Transaction Statement #<span class="statement"> 1</span></h2>
+                        <div class="details">
+                            <div class="type">Receiver Paid Lender</div>
+                            <div class="issue-date">01/01/2021</div>
+                            <div class="bkash"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="20" viewBox="-6.6741 -11.07275 57.8422 66.4365"><g fill="none"><path fill="#DF146E" d="M42.31 44.291H2.182C.981 44.291 0 43.308 0 42.107V2.186C0 .982.981 0 2.182 0H42.31c1.203 0 2.184.982 2.184 2.186v39.921c0 1.201-.981 2.184-2.184 2.184"/><path fill="#FFF" d="M31.894 24.251l-14.107-2.246 1.909 8.329zm.572-.682L21.374 8.16l-3.623 13.106zm-15.402-2.482L5.441 6.239l15.221 1.819zm-5.639-6.154l-6.449-6.08h1.695zm24.504 1.15L33.2 23.486l-4.426-6.118zM21.417 30.232l10.71-4.3.454-1.365zm-8.933 7.821l4.589-16.102 2.326 10.479zm24.099-21.914l-1.128 3.056 4.059-.07z"/></g></svg><div class="number">01961229150</div></div>
+                            <div class="installment">Installment: <span class="value">2</span></div>
+                            <div class="transaction-id">Transaction Id: C60a2288f788f921b543cd813</div>
+                            <div class="amount">Amount : 2130 BDT</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="buttons admin-buttons">
+                <a href="#" class="btn-profile btn-transparent">End Contract</a>
+                <a href="#" class="btn-profile btn-transparent">Remove Collateral</a>
+                <a href="#" class="btn-profile btn-transparent">Ignore Issue</a>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
