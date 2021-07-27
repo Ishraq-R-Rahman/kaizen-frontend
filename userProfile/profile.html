@@ -327,7 +327,7 @@
                     <a href="#!" class="btn-profile btn-dark"  onclick="popupRepayLoan()">Repay Loan</a>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="btn-profile btn-light">Report Issue</a>
+                    <a href="#!" class="btn-profile btn-light" onclick="popupReportIssue()">Report Issue</a>
                 </div>
                 <!-- <div class="buttons">
                     <a href="#" class="btn-profile btn-dark">Extend Contract</a>
@@ -2025,6 +2025,36 @@
             </div>
         </div>
     </div>
+
+
+    <div class="report-issue-popup remove" id="report-issue-popup">
+        <div class="report-issue-card content-box remove" id="popup-report">
+            <div class="title-card">
+                <h1>Report An Issue</h1>
+            </div>
+            <div class="form">
+                <!-- Amount -->
+    
+                <!-- Details of the loan -->
+                <div class="text-area-input-field inputs-div">
+                    <aside>
+                        <h3>State Your Issue</h3>
+                        <p>Max 140 Characters</p>
+                    </aside>
+                    <div class="input-field">
+                        <!-- <input type="text" class="small-input" max="10000" min="1000" required> -->
+                        <textarea class="text-area-input" cols="20" rows="5" maxlength="140" minlength="1"></textarea>
+                    </div>
+                </div>
+    
+                <!-- Buttons -->
+                <div class="buttons inputs-div">
+                    <a href="#!" class="btn-form btn-light" onclick="popupReportIssue()">Cancel</a>
+                    <a href="#" class="btn-form btn-dark">Post</a>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 
@@ -2032,6 +2062,13 @@
     function popupLoanRequest() {
         let blur = document.getElementById("main");
         let request = document.getElementById("popup-request");
+        blur.classList.toggle("background-blur");
+        request.classList.toggle("remove");
+    }
+
+    function popupReportIssue() {
+        let blur = document.getElementById("main");
+        let request = document.getElementById("popup-report");
         blur.classList.toggle("background-blur");
         request.classList.toggle("remove");
     }
@@ -2098,7 +2135,7 @@
         }
         else if( val == 2 ){
             // this is if they have an active contract
-           show = ['bkash', 'description','lender-views-receiver','collateral','loan-contract-info','contract-info','buttons-list','contract-buttons','end-contract-button','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' ,'transaction-history', 'review-section','post-review-popup'];
+           show = ['bkash', 'description','lender-views-receiver','collateral','loan-contract-info','contract-info','buttons-list','contract-buttons','end-contract-button','current-lenders-section','report-issue-1','report-issue-2' ,'side-scroll-section' ,'transaction-history', 'review-section','post-review-popup' , 'report-issue-popup'];
         }
         
 
@@ -2116,7 +2153,7 @@
         }
         else if ( val == 2 ){
             // receiver seeing lender after they agreed on a contract
-            show = ['bkash', 'description' , 'receiver-views-lender' , 'loan-contract-info', 'contract-info','side-scroll-section' ,'transaction-history', 'buttons-list','contract-buttons' , 'repay-loan-button' ]
+            show = ['bkash', 'description' , 'receiver-views-lender' , 'loan-contract-info', 'contract-info','side-scroll-section' ,'transaction-history', 'buttons-list','contract-buttons' , 'repay-loan-button', 'report-issue-popup' ]
         }
 
         for( i = 0 ; i < show.length ; i++ ){

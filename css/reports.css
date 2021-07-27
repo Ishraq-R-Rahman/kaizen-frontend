@@ -707,6 +707,19 @@ input:focus:invalid {
   color: #c3073f;
 }
 
+.hide {
+  visibility: hidden !important;
+}
+
+.remove {
+  display: none !important;
+}
+
+.background-blur {
+  pointer-events: none;
+  filter: blur(10px);
+}
+
 .main {
   font-family: "Staatliches", cursive;
 }
@@ -875,6 +888,14 @@ input:focus:invalid {
   border-bottom: 1px solid lightgray;
   font-weight: bold;
   margin-bottom: 10px;
+}
+.transaction-history h1 .lender {
+  color: #c3073f;
+  font-size: 2rem;
+}
+.transaction-history h1 .receiver {
+  color: tomato;
+  font-size: 2rem;
 }
 .transaction-history h1 .value {
   font-size: 1.4rem;

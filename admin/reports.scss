@@ -2,6 +2,8 @@
 @import '../utilities/variables';
 @import '../utilities/buttons';
 @import '../utilities/small_utilities';
+@import '../utilities/displays';
+
 
 .main {
     font-family: 'Staatliches' , cursive ;
@@ -222,6 +224,16 @@
         font-weight: bold;
 
         margin-bottom: 10px;
+        
+        .lender {
+            color: $secondary-color;
+            font-size: 2rem;
+        }
+
+        .receiver {
+            color: tomato;
+            font-size: 2rem;
+        }
 
         .value{
             font-size: 1.4rem;
