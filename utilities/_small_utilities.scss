@@ -664,13 +664,27 @@ input {
     border-radius: 5px;
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2) , -5px -5px 15px 5px rgba(0,0,0,0.2);
 
-    h2 {
-        font-style: italic;
-        
-        .statement {
-            color: $secondary-color;
+    .head-contract {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-style: italic;
+            
+            .statement {
+                color: $secondary-color;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: #736f6f;
         }
     }
+
 
     .details {
         border-top: 2px dashed $secondary-color ;
@@ -731,6 +745,7 @@ input {
         }
 
         .transaction-id {
+            width: 100%;
             font-size: 0.8rem;
             opacity: 0.6;
             grid-column: 1/span 2;

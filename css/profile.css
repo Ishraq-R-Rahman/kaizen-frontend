@@ -642,11 +642,21 @@ input:focus:invalid {
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2), -5px -5px 15px 5px rgba(0, 0, 0, 0.2);
 }
-.transaction-card h2 {
+.transaction-card .head-contract {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.transaction-card .head-contract h2 {
   font-style: italic;
 }
-.transaction-card h2 .statement {
+.transaction-card .head-contract h2 .statement {
   color: #c3073f;
+}
+.transaction-card .head-contract p {
+  font-size: 0.8rem;
+  color: #736f6f;
 }
 .transaction-card .details {
   border-top: 2px dashed #c3073f;
@@ -694,6 +704,7 @@ input:focus:invalid {
   font-weight: bold;
 }
 .transaction-card .details .transaction-id {
+  width: 100%;
   font-size: 0.8rem;
   opacity: 0.6;
   grid-column: 1/span 2;
